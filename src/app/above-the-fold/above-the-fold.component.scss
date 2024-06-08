@@ -1,0 +1,64 @@
+@import "./../../styles.scss";
+
+main {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, white, rgb(215, 255, 235));
+  > .corner-ellipse {
+    position: absolute;
+    top: -50px;
+    left: -150px;
+  }
+}
+
+.headline {
+  position: absolute;
+  top: 190px;
+  left: 550px;
+  color: #57e8a2;
+  @include dflexColumn($g: 10px, $ai: flex-start);
+  > p {
+    font-size: clamp(36px, 5vw, 64px);
+  }
+  > div {
+    line-height: 0.7;
+    font-size: clamp(72px, 9vw, 128px);
+    font-family: "Baloo 2";
+    font-weight: 800;
+  }
+}
+
+.connect-with-me {
+  position: absolute;
+  right: 100px;
+  bottom: 30px;
+  @include dflexColumn($g: 25px);
+  > img {
+    cursor: pointer;
+  }
+}
+
+.bottom-ellipse {
+  width: 200px;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 0;
+  right: 300px;
+  @include dflexColumn();
+  > p:nth-of-type(1) {
+    font-size: 23px;
+    font-weight: 500;
+    color: #57e8a2;
+  }
+  > p:nth-of-type(2) {
+    background-color: #57e8a2;
+    width: 2px;
+    height: 300px;
+  }
+}
