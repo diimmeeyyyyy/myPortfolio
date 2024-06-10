@@ -1,0 +1,31 @@
+@import "./../../styles.scss";
+
+main {
+  position: relative;
+  @include dflexColumn();
+  background: linear-gradient(128.95deg, #57e8a2 32.52%, #33b476 104.12%);
+  > aside {
+    @include dflexColumn();
+    padding-block: 50px;
+  }
+  > aside h1 {
+    font-family: "Baloo 2";
+    font-size: 96px;
+    color: white;
+  }
+  > aside section {
+    @include dflexColumn($g: 50px);
+    > div {
+      display: flex;
+      gap: 100px;
+    }
+    > div span {
+      @include dflexColumn($g: 10px);
+      > p {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+}

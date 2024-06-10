@@ -33,8 +33,12 @@ main {
   right: 100px;
   bottom: 30px;
   @include dflexColumn($g: 25px);
-  > img {
+  > a img {
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: translateX(-15px);
+    }
   }
 }
 
