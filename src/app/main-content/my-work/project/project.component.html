@@ -1,1 +1,15 @@
-<p>project works!</p>
+<main [ngClass]="index % 2 === 0 ? 'row' : 'row-reverse'">
+  <section>
+    <img [src]="projectData.img" />
+  </section>
+  <section
+    class="project-information"
+    [ngClass]="{ 'align-items-start': index % 2 === 0 }"
+  >
+    <h1>{{ projectData.title }}{{ index }}</h1>
+    <h2>{{ projectData.skills }}</h2>
+    <p [ngClass]="{ 'text-align-start': index % 2 === 0 }">
+      {{ projectData.description }}
+    </p>
+  </section>
+</main>

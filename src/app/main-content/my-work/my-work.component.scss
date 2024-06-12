@@ -35,6 +35,30 @@ main {
   top: 150px;
 }
 
+.ellipse-three {
+  width: 400px;
+  position: absolute;
+  left: -200px;
+  top: 500px;
+  z-index: -1;
+}
+
+.ellipse-four {
+  width: 650px;
+  position: absolute;
+  top: 800px;
+  right: -325px;
+  z-index: -1;
+}
+
+.ellipse-five {
+  width: 50px;
+  position: absolute;
+  top: 1200px;
+  left: 150px;
+}
+
 .projects {
   margin-top: 100px;
+  @include dflexColumn($g: 100px, $ai: flex-start);
 }
