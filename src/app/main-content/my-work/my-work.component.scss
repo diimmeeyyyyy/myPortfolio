@@ -4,6 +4,7 @@ main {
   padding-block: 100px;
   padding-inline: 64px;
   position: relative;
+  overflow-x: hidden;
 }
 
 .headline {
@@ -24,7 +25,7 @@ main {
 .ellipse-one {
   width: 100px;
   position: absolute;
-  top: 50px;
+  top: 40px;
   left: 500px;
 }
 
@@ -32,21 +33,21 @@ main {
   width: 180px;
   position: absolute;
   right: 100px;
-  top: 150px;
+  top: 200px;
 }
 
 .ellipse-three {
   width: 400px;
   position: absolute;
   left: -200px;
-  top: 500px;
+  top: 550px;
   z-index: -1;
 }
 
 .ellipse-four {
   width: 650px;
   position: absolute;
-  top: 800px;
+  top: 850px;
   right: -325px;
   z-index: -1;
 }
@@ -54,11 +55,26 @@ main {
 .ellipse-five {
   width: 50px;
   position: absolute;
-  top: 1200px;
+  top: 1250px;
   left: 150px;
+}
+
+.ellipse-six {
+  width: 250px;
+  position: absolute;
+  top: 1700px;
+  left: 100px;
+  z-index: -1;
+}
+
+.ellipse-seven {
+  width: 100px;
+  position: absolute;
+  right: 100px;
+  top: 2350px;
 }
 
 .projects {
   margin-top: 100px;
-  @include dflexColumn($g: 100px, $ai: flex-start);
+  @include dflexColumn($g: 150px, $ai: flex-start);
 }

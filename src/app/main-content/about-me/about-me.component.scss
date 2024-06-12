@@ -27,53 +27,5 @@ main {
   > section:nth-of-type(2) {
     @include dflexColumn($g: 20px);
     font-size: 23px;
-    > button {
-      padding: 15px 30px;
-      border: 2px solid #57e8a2;
-      border-radius: 10px;
-      color: #57e8a2;
-      cursor: pointer;
-      background-color: transparent;
-      font-size: 23px;
-      box-sizing: border-box;
-      transition: transform 0.3s ease-in-out;
-      &:hover {
-        animation: fillButton 100ms ease-in-out forwards;
-        animation-delay: 1ms;
-        color: white;
-        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
-        transform: scale(1.1);
-      }
-      &:active {
-        background-color: #33b476;
-      }
-    }
-  }
-}
-
-@keyframes fillButton {
-  0% {
-    background-color: transparent;
-  }
-  25% {
-    background: linear-gradient(
-      45deg,
-      #57e8a2 0%,
-      #33b476 50%,
-      #ffffff 50%,
-      #ffffff 100%
-    );
-  }
-  60% {
-    background: linear-gradient(
-      45deg,
-      #57e8a2 0%,
-      #33b476 50%,
-      #ffffff 50%,
-      #ffffff 100%
-    );
-  }
-  100% {
-    background: radial-gradient(circle, #57e8a2 0%, #33b476 100%);
   }
 }

@@ -35,9 +35,22 @@ main {
   }
   > p {
     font-size: 16px;
-   /*  width: 430px; */
     text-align: end;
   }
+  > div {
+    display: flex;
+    gap: 80px;
+  }
+}
+
+.live-test-button {
+  border: none;
+  background: rgba(87, 232, 162, 1);
+  border-radius: 10px;
+  padding: 13px 24px;
+  font-size: 23px;
+  color: white;
+  cursor: pointer;
 }
 
 .text-align-start {
