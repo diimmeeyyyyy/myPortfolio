@@ -1,19 +1,19 @@
 <main [ngClass]="index % 2 === 0 ? 'row' : 'row-reverse'">
   <section>
-    <img [src]="projectData.img" />
+    <img [src]="projectData.img" loading="eager" />
   </section>
   <section
     class="project-information"
     [ngClass]="{ 'align-items-start': index % 2 === 0 }"
   >
-    <h1>{{ projectData.title }}{{ index }}</h1>
+    <h1>{{ projectData.title }}</h1>
     <h2>{{ projectData.skills }}</h2>
     <p [ngClass]="{ 'text-align-start': index % 2 === 0 }">
       {{ projectData.description }}
     </p>
     <div>
       <button class="button-settings">Github</button>
-      <button class="live-test-button">Live test</button>
+      <button class="button-settings">Live test</button>
     </div>
   </section>
 </main>

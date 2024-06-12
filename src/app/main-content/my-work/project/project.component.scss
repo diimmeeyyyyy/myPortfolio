@@ -3,7 +3,16 @@
 main {
   width: 100%;
   display: flex;
-  gap: 25px;
+  gap: 80px;
+  > section img {
+    height: 400px;
+    width: 620px;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+      transform: scale(1.05) translateY(-10px);
+    }
+  }
 }
 
 .row {
@@ -18,7 +27,7 @@ main {
 }
 
 .project-information {
-  @include dflexColumn($g: 15px, $ai: flex-end);
+  @include dflexColumn($g: 32px, $ai: flex-end);
   width: 50%;
   > h1 {
     color: rgba(87, 232, 162, 1);
@@ -43,15 +52,15 @@ main {
   }
 }
 
-.live-test-button {
+/* .live-test-button {
   border: none;
-  background: rgba(87, 232, 162, 1);
+  background: radial-gradient(circle, #57e8a2 0%, #33b476 100%);
   border-radius: 10px;
   padding: 13px 24px;
   font-size: 23px;
   color: white;
   cursor: pointer;
-}
+} */
 
 .text-align-start {
   text-align: start !important;

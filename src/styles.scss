@@ -8,7 +8,9 @@ body {
 
 p,
 h1,
-h2 {
+h2,
+h3,
+h4 {
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -20,8 +22,6 @@ h2 {
   align-items: $ai;
   gap: $g;
 }
-
-
 
 .button-settings {
   padding: 15px 30px;
