@@ -72,6 +72,20 @@ h4 {
   }
 }
 
+@mixin inputfield-setting($height: unset, $padding-top: 0) {
+  cursor: pointer;
+  font-family: "Montserrat";
+  height: $height;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid rgba(87, 232, 162, 1);
+  font-size: 16px;
+  padding: 15px 25px;
+  &::placeholder {
+    font-size: 16px;
+  }
+}
+
 /* montserrat-100 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

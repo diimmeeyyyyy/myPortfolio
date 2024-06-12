@@ -1,3 +1,5 @@
+@import "./../../../../styles.scss";
+
 main {
   height: 117px;
   padding-inline: 100px;
@@ -10,11 +12,15 @@ main {
   > nav {
     display: flex;
     gap: 36px;
+    position: relative;
     > a {
       text-decoration: none;
       color: #57e8a2;
       font-size: 23px;
       font-weight: 400;
+      &:hover {
+        font-weight: bold;
+      }
     }
   }
 }

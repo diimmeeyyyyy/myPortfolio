@@ -1,5 +1,6 @@
 <main>
   <h1>Contact</h1>
+  <img class="ellipse-one" src="./../../../assets/img/Ellipse 9.png" />
 
   <section class="contact">
     <div class="contact-text">
@@ -9,12 +10,44 @@
         getting to know your ideas and contributing to your projects with my
         work.
       </p>
-      <h4>Need a Frontend developer? Contact me!</h4>
+      <h4>Need a Frontend developer? <b>Contact me!</b></h4>
     </div>
-    <div class="contact-form">
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-    </div>
+
+    <form
+      (ngSubmit)="onSubmit(ContactForm)"
+      #ContactForm="ngForm"
+      class="contact-form"
+    >
+      <input
+        [(ngModel)]="contactData.name"
+        name="name"
+        type="text"
+        required
+        placeholder="Your name"
+      />
+      <input
+        [(ngModel)]="contactData.email"
+        name="email"
+        type="text"
+        required
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        placeholder="Your email"
+      />
+      <textarea
+        [(ngModel)]="contactData.message"
+        name="message"
+        required
+        id=""
+        placeholder="Your message"
+      ></textarea>
+      <div class="checkbox">
+        <img [src]="checkboxImg" (click)="changeCheckboxImg()" />
+        <p>
+          I've read the <b>privacy policy</b> and agree to the processing of my
+          data as outlined.
+        </p>
+      </div>
+      <button class="button-settings">Say hello ;)</button>
+    </form>
   </section>
 </main>
