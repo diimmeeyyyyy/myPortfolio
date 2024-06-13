@@ -13,41 +13,6 @@
       <h4>Need a Frontend developer? <b>Contact me!</b></h4>
     </div>
 
-    <form
-      (ngSubmit)="onSubmit(ContactForm)"
-      #ContactForm="ngForm"
-      class="contact-form"
-    >
-      <input
-        [(ngModel)]="contactData.name"
-        name="name"
-        type="text"
-        required
-        placeholder="Your name"
-      />
-      <input
-        [(ngModel)]="contactData.email"
-        name="email"
-        type="text"
-        required
-        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-        placeholder="Your email"
-      />
-      <textarea
-        [(ngModel)]="contactData.message"
-        name="message"
-        required
-        id=""
-        placeholder="Your message"
-      ></textarea>
-      <div class="checkbox">
-        <img [src]="checkboxImg" (click)="changeCheckboxImg()" />
-        <p>
-          I've read the <b>privacy policy</b> and agree to the processing of my
-          data as outlined.
-        </p>
-      </div>
-      <button class="button-settings">Say hello ;)</button>
-    </form>
+    <app-contact-form></app-contact-form>
   </section>
 </main>

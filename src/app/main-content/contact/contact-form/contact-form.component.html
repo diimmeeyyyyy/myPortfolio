@@ -1,0 +1,42 @@
+<form
+  (ngSubmit)="onSubmit(ContactForm)"
+  #ContactForm="ngForm"
+  class="contact-form"
+>
+  <input
+    [(ngModel)]="contactData.name"
+    name="name"
+    type="text"
+    required
+    placeholder="Your name"
+  />
+  <input
+    [(ngModel)]="contactData.email"
+    name="email"
+    type="text"
+    required
+    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+    placeholder="Your email"
+  />
+  <textarea
+    [(ngModel)]="contactData.message"
+    name="message"
+    required
+    id=""
+    placeholder="Your message"
+    #message="ngModel"
+    minlength="5"
+  ></textarea>
+  @if (!message.valid && message.touched) {
+  <span class="error-message">Please enter a message</span>
+  }
+
+  <div class="checkbox">
+    <img [src]="checkboxImg" (click)="changeCheckboxImg()" />
+    <p>
+      I've read the <b>privacy policy</b> and agree to the processing of my data
+      as outlined.
+    </p>
+  </div>
+  <button class="button-settings">Say hello ;)</button>
+</form>

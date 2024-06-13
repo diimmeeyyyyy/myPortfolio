@@ -23,7 +23,6 @@ main {
 
 .contact-text {
   @include dflexColumn($g: 20px, $ai: flex-start, $jc: flex-start);
-  width: 50%;
   > h2 {
     font-size: 32px;
     font-weight: 700;
@@ -35,33 +34,6 @@ main {
     font-size: 16px;
     color: rgba(87, 232, 162, 1);
     font-weight: 400;
-  }
-}
-
-.contact-form {
-  width: 50%;
-  @include dflexColumn($g: 20px);
-  > input {
-    @include inputfield-setting();
-  }
-  > textarea {
-    @include inputfield-setting($height: 200px, $padding-top: 10px);
-  }
-}
-
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  > img {
-    cursor: pointer;
-    &:hover {
-      background: rgba(181, 255, 237, 1);
-      border-radius: 38px;
-    }
-  }
-  > p {
-    font-size: 14px;
   }
 }
 
