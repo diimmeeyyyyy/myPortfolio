@@ -35,4 +35,24 @@ export class ContactFormComponent {
       console.log(this.contactData);
     }
   }
+
+  isFocused = false;
+
+  onFocus() {
+    this.isFocused = true;
+  }
+
+  onBlur() {
+    this.isFocused = false;
+  }
+
+  focusOnName = false;
+  onFocusNameField() {
+    this.focusOnName = true;
+  }
+
+  focusOnEmail = false;
+  onFocusEmailField() {
+    this.focusOnEmail = true;
+  }
 }

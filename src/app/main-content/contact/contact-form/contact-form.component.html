@@ -3,33 +3,55 @@
   #ContactForm="ngForm"
   class="contact-form"
 >
-  <input
-    [(ngModel)]="contactData.name"
-    name="name"
-    type="text"
-    required
-    placeholder="Your name"
-  />
-  <input
-    [(ngModel)]="contactData.email"
-    name="email"
-    type="text"
-    required
-    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-    placeholder="Your email"
-  />
-  <textarea
-    [(ngModel)]="contactData.message"
-    name="message"
-    required
-    id=""
-    placeholder="Your message"
-    #message="ngModel"
-    minlength="5"
-  ></textarea>
-  @if (!message.valid && message.touched) {
-  <span class="error-message">Please enter a message</span>
-  }
+  <section>
+    <input
+      [(ngModel)]="contactData.name"
+      name="name"
+      type="text"
+      required
+      placeholder="Your name"
+      (focus)="onFocusNameField()"
+      #name="ngModel"
+      minlength="3"
+      [ngClass]="{ 'valid-input-value': name.valid }"
+    />
+    <span class="error-message" *ngIf="name.invalid && focusOnName"
+      >Please enter a name</span
+    >
+  </section>
+
+  <section>
+    <input
+      [(ngModel)]="contactData.email"
+      name="email"
+      type="text"
+      required
+      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+      placeholder="Your email"
+      #email="ngModel"
+      [ngClass]="{ 'valid-input-value': email.valid }"
+      (focus)="onFocusEmailField()"
+    />
+    <span class="error-message" *ngIf="email.invalid && focusOnEmail"
+      >Please enter a valid email</span
+    >
+  </section>
+
+  <section>
+    <textarea
+      [(ngModel)]="contactData.message"
+      name="message"
+      required
+      placeholder="Your message"
+      #message="ngModel"
+      minlength="5"
+      (focus)="onFocus()"
+      [ngClass]="{ 'valid-input-value': message.valid }"
+    ></textarea>
+    <span class="error-message" *ngIf="message.invalid && isFocused"
+      >Please enter a message</span
+    >
+  </section>
 
   <div class="checkbox">
     <img [src]="checkboxImg" (click)="changeCheckboxImg()" />
@@ -40,3 +62,5 @@
   </div>
   <button class="button-settings">Say hello ;)</button>
 </form>
+
+<!-- (blur)="onBlur()" -->
