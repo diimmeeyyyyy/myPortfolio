@@ -20,7 +20,8 @@
     border: 2px solid rgba(87, 232, 162, 1);
     padding: 14px 24px;
   }
-  > input {
+  > input,
+  textarea {
     font-family: "Montserrat";
     border: none;
     outline: none;
@@ -38,6 +39,16 @@
     transform: translateY(-50%);
   }
 }
+
+/* section textarea {
+  position: relative;
+}
+
+section textarea img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+} */
 
 .checkbox {
   display: flex;
