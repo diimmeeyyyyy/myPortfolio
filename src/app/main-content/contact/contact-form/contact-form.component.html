@@ -61,33 +61,29 @@
   </section>
 
   <section>
-    <!-- <div class="input-wrapper"> -->
-    <textarea
-      [(ngModel)]="contactData.message"
-      name="message"
-      required
-      placeholder="Your message"
-      #message="ngModel"
-      minlength="5"
+    <div
+      class="textarea-wrapper"
       [ngClass]="{
-        'invalid-input-value': message.invalid && focusOnMessage,
-        'valid-input-value': message.valid && focusOnMessage
+        'invalid-input-value-textarea': message.invalid && focusOnMessage,
+        'valid-input-value-textarea': message.valid && focusOnMessage
       }"
       (click)="focusInputField('message')"
       (blur)="blurInputfield('message')"
     >
- <img
-      src="/assets/img/Frame.png"
-      *ngIf="message.invalid && focusOnMessage"
-    />
-    <img src="/assets/img/Vector.png" *ngIf="message.valid" /></textarea
-    >
-    <img
-      src="/assets/img/Frame.png"
-      *ngIf="message.invalid && focusOnMessage"
-    />
-    <img src="/assets/img/Vector.png" *ngIf="message.valid" />
-    <!-- </div> -->
+      <textarea
+        [(ngModel)]="contactData.message"
+        name="message"
+        required
+        placeholder="Your message"
+        #message="ngModel"
+        minlength="5"
+      ></textarea>
+      <img
+        src="/assets/img/Frame.png"
+        *ngIf="message.invalid && focusOnMessage"
+      />
+      <img src="/assets/img/Vector.png" *ngIf="message.valid" />
+    </div>
     <span class="error-message" *ngIf="message.invalid && focusOnMessage"
       >Please enter a message</span
     >
