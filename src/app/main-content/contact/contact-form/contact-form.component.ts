@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,25 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
+  @ViewChild('Name_Input') nameField!: ElementRef;
+  @ViewChild('Email_Input') emailField!: ElementRef;
+  focusInputField(inputfield: string) {
+    if (
+      inputfield === 'name' &&
+      this.nameField &&
+      this.nameField.nativeElement
+    ) {
+      this.nameField.nativeElement.focus();
+    }
+    if (
+      inputfield === 'email' &&
+      this.emailField &&
+      this.emailField.nativeElement
+    ) {
+      this.emailField.nativeElement.focus();
+    }
+  }
+
   checkboxChecked = false;
   checkboxImg = '/assets/img/checkbox-unchecked-default.png';
 
@@ -37,11 +56,9 @@ export class ContactFormComponent {
   }
 
   isFocused = false;
-
   onFocus() {
     this.isFocused = true;
   }
-
   onBlur() {
     this.isFocused = false;
   }
@@ -50,9 +67,15 @@ export class ContactFormComponent {
   onFocusNameField() {
     this.focusOnName = true;
   }
+  onBlurNameField() {
+    this.focusOnName = false;
+  }
 
   focusOnEmail = false;
   onFocusEmailField() {
     this.focusOnEmail = true;
+  }
+  onBlurEmailField() {
+    this.focusOnEmail = false;
   }
 }

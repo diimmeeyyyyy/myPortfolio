@@ -2,11 +2,40 @@
 
 .contact-form {
   @include dflexColumn($g: 20px);
-  > section input {
-    @include inputfield-setting();
-  }
   > section textarea {
     @include inputfield-setting($height: 200px, $padding-top: 10px);
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  cursor: pointer;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid rgba(87, 232, 162, 1);
+  font-size: 16px;
+  padding: 15px 25px;
+  background-color: white;
+  &:not(:focus):hover {
+    border: 2px solid rgba(87, 232, 162, 1);
+    padding: 14px 24px;
+  }
+  > input {
+    font-family: "Montserrat";
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  > img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -33,4 +62,20 @@
 
 .valid-input-value {
   border: 1px solid rgba(87, 232, 162, 1) !important;
+  &:hover {
+    border: 2px solid rgba(87, 232, 162, 1) !important;
+    padding: 14px 24px !important;
+  }
+}
+
+.invalid-input-value {
+  border: 1px solid red !important;
+  &:focus {
+    border: 1px solid red;
+    outline: none;
+  }
+  &:hover {
+    border: 2px solid red !important;
+    padding: 14px 24px !important;
+  }
 }

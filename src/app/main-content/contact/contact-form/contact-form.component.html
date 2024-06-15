@@ -4,34 +4,57 @@
   class="contact-form"
 >
   <section>
-    <input
-      [(ngModel)]="contactData.name"
-      name="name"
-      type="text"
-      required
-      placeholder="Your name"
-      (focus)="onFocusNameField()"
-      #name="ngModel"
-      minlength="3"
-      [ngClass]="{ 'valid-input-value': name.valid }"
-    />
+    <div
+      class="input-wrapper"
+      [ngClass]="{
+        'invalid-input-value': name.invalid && focusOnName,
+        'valid-input-value': name.valid && focusOnName
+      }"
+      (click)="focusInputField('name')"
+    >
+      <input
+        #Name_Input
+        #name="ngModel"
+        [(ngModel)]="contactData.name"
+        name="name"
+        type="text"
+        required
+        placeholder="Your name"
+        (focus)="onFocusNameField()"
+        (blur)="onBlurNameField()"
+        minlength="3"
+      />
+      <img src="/assets/img/Frame.png" *ngIf="name.invalid && focusOnName" />
+      <img src="/assets/img/Vector.png" *ngIf="name.valid" />
+    </div>
     <span class="error-message" *ngIf="name.invalid && focusOnName"
       >Please enter a name</span
     >
   </section>
 
   <section>
-    <input
-      [(ngModel)]="contactData.email"
-      name="email"
-      type="text"
-      required
-      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-      placeholder="Your email"
-      #email="ngModel"
-      [ngClass]="{ 'valid-input-value': email.valid }"
-      (focus)="onFocusEmailField()"
-    />
+    <div
+      class="input-wrapper"
+      [ngClass]="{
+        'invalid-input-value': email.invalid && focusOnEmail,
+        'valid-input-value': email.valid && focusOnEmail
+      }"
+      (click)="focusInputField('email')"
+    >
+      <input
+        [(ngModel)]="contactData.email"
+        name="email"
+        type="text"
+        required
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        placeholder="Your email"
+        #email="ngModel"
+        (focus)="onFocusEmailField()"
+        (blur)="onBlurEmailField()"
+      />
+      <img src="/assets/img/Frame.png" *ngIf="email.invalid && focusOnEmail" />
+      <img src="/assets/img/Vector.png" *ngIf="email.valid" />
+    </div>
     <span class="error-message" *ngIf="email.invalid && focusOnEmail"
       >Please enter a valid email</span
     >
@@ -46,7 +69,9 @@
       #message="ngModel"
       minlength="5"
       (focus)="onFocus()"
+      (blur)="onBlur()"
       [ngClass]="{ 'valid-input-value': message.valid }"
+      [ngClass]="{ 'invalid-input-value': message.invalid && isFocused }"
     ></textarea>
     <span class="error-message" *ngIf="message.invalid && isFocused"
       >Please enter a message</span
@@ -62,5 +87,3 @@
   </div>
   <button class="button-settings">Say hello ;)</button>
 </form>
-
-<!-- (blur)="onBlur()" -->
