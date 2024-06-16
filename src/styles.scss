@@ -45,6 +45,15 @@ h4 {
   }
 }
 
+.button-disabled {
+  padding: 15px 30px;
+  border: 2px solid rgba(187, 187, 187, 1);
+  border-radius: 10px;
+  color: rgba(187, 187, 187, 1);
+  background-color: transparent;
+  font-size: 23px;
+}
+
 @keyframes fillButton {
   0% {
     background-color: transparent;

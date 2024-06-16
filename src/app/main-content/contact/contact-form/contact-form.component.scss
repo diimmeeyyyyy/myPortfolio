@@ -94,6 +94,17 @@
   }
 }
 
+.privacy-policy {
+  color: rgba(87, 232, 162, 1);
+  transition: font-weight 0.3s ease-in-out;
+  padding: 5px 4px;
+}
+
+.checkbox img:hover + p a.privacy-policy {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .error-message {
   color: red;
   font-size: 14px;
