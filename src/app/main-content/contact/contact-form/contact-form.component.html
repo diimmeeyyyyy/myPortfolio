@@ -71,6 +71,7 @@
       (blur)="blurInputfield('message')"
     >
       <textarea
+        (blur)="blurInputfield('message')"
         [(ngModel)]="contactData.message"
         name="message"
         required
@@ -101,6 +102,7 @@
       >Please accept the privacy policy</span
     >
   </section>
+  
   <button
     [class]="
       ContactForm.valid && checkboxChecked

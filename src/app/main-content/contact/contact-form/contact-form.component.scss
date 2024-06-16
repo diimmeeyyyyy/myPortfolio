@@ -73,7 +73,7 @@
   }
   > img {
     position: absolute;
-    right: 25px;
+    right: 20px;
     top: 15px;
   }
 }
@@ -96,12 +96,14 @@
 
 .privacy-policy {
   color: rgba(87, 232, 162, 1);
-  transition: font-weight 0.3s ease-in-out;
+  /* transition: font-weight 0.3s ease-in-out; */
+  font-weight: bold;
   padding: 5px 4px;
+  cursor: pointer;
 }
 
 .checkbox img:hover + p a.privacy-policy {
-  font-weight: bold;
+ /*  font-weight: bold; */
   text-decoration: underline;
 }
 
@@ -146,7 +148,7 @@
     border: 2px solid red !important;
     > img {
       top: 14px;
-      right: 24px;
+      right: 19px;
     }
   }
 }
@@ -157,7 +159,7 @@
     border: 2px solid rgba(87, 232, 162, 1) !important;
     > img {
       top: 14px;
-      right: 24px;
+      right: 19px;
     }
   }
 }
