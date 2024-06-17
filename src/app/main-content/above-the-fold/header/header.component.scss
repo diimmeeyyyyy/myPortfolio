@@ -14,10 +14,14 @@ main {
     gap: 36px;
     position: relative;
     > a {
+      display: flex;
+      justify-content: center;
+      width: 130px;
       text-decoration: none;
       color: #57e8a2;
       font-size: 23px;
       font-weight: 400;
+      transition: font-weight 0.3s ease-in-out;
       &:hover {
         font-weight: bold;
       }

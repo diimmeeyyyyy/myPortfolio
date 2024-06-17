@@ -96,14 +96,14 @@
 
 .privacy-policy {
   color: rgba(87, 232, 162, 1);
-  /* transition: font-weight 0.3s ease-in-out; */
-  font-weight: bold;
-  padding: 5px 4px;
+  transition: font-weight 0.3s ease-in-out;
+  display: inline-block;
+  width: 110px;
   cursor: pointer;
 }
 
 .checkbox img:hover + p a.privacy-policy {
- /*  font-weight: bold; */
+  font-weight: bold;
   text-decoration: underline;
 }
 
