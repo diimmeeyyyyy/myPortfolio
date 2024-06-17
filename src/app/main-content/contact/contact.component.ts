@@ -11,4 +11,5 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  hover: boolean = false;
 }

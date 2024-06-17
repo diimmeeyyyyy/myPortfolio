@@ -1,13 +1,26 @@
 <main>
   <h1>Contact</h1>
-  <img class="ellipse-one" src="./../../../assets/img/Ellipse 9.png" />
+  <img class="ellipse-one" src="/assets/img/Ellipse 9.png" />
+  <img class="ellipse-two" src="/assets/img/Ellipse 9.png" />
+  <a href="#Landing_Page">
+    <img
+      class="go-up"
+      [src]="
+        hover
+          ? '/assets/img/arrow-down-line-hover.png'
+          : '/assets/img/arrow-down-line.png'
+      "
+      (mouseover)="hover = true"
+      (mouseout)="hover = false"
+    />
+  </a>
 
   <section class="contact">
     <div class="contact-text">
       <h2>Got a problem to solve?</h2>
       <p>
         Feel free to contact me through this form. I'm interested in hearing
-        from you, learning about your ideas, and possibly contributing to your 
+        from you, learning about your ideas, and possibly contributing to your
         projects with my work.
       </p>
       <h4>Need a Frontend developer? <b>Contact me!</b></h4>

@@ -10,6 +10,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  > a {
+    position: absolute;
+    bottom: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 section {
@@ -20,6 +31,7 @@ section {
   > p {
     font-size: 23px;
     color: white;
+    font-weight: 400;
   }
   > div {
     display: flex;
