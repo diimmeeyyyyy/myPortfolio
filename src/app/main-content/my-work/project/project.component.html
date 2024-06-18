@@ -12,8 +12,14 @@
       {{ projectData.description }}
     </p>
     <div>
-      <button class="button-settings">Github</button>
-      <button class="button-settings">Live test</button>
+      <a [href]="projectData.github" target="_blank">
+        <button class="button-settings">Github</button>
+      </a>
+      <!-- <button class="button-settings">Github</button> -->
+      <a [href]="projectData.livetest" target="_blank">
+        <button class="button-settings">Live test</button>
+      </a>
+      <!-- <button class="button-settings">Live test</button> -->
     </div>
   </section>
 </main>

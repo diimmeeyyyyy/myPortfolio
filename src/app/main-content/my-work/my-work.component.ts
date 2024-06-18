@@ -17,6 +17,8 @@ export class MyWorkComponent {
       description:
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       img: 'assets/img/polloLoco.png',
+      github: 'https://github.com/diimmeeyyyyy/El_Pollo_Loco',
+      livetest: 'https://dimitrios-kapetanis.com/ElPolloLoco/index',
     },
     {
       title: 'Pokédex',
@@ -24,6 +26,8 @@ export class MyWorkComponent {
       description:
         'Based on the PokéAPI, a simple library that provides and catalogues pokemon information.',
       img: 'assets/img/pokedex.png',
+      github: 'https://github.com/diimmeeyyyyy/Pokedex',
+      livetest: 'https://dimitrios-kapetanis.com/pokedex/index',
     },
     {
       title: 'Join',
@@ -31,6 +35,8 @@ export class MyWorkComponent {
       description:
         'Task manager inspired by the kanban system. Create and organize tasks using drag & drop functions, assign users and categories.',
       img: 'assets/img/join.png',
+      github: 'https://github.com/diimmeeyyyyy/join',
+      livetest: 'https://dimitrios-kapetanis.com/join',
     },
     {
       title: 'Olympia - Grill',
