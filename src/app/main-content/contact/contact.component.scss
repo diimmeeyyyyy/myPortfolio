@@ -8,7 +8,7 @@ main {
 
   > h1 {
     font-family: "Baloo 2";
-    font-size: 100px;
+    font-size: clamp(64px, 11vw, 100px);
     font-weight: 600;
     color: #57e8a2;
     line-height: 0.8;
@@ -68,5 +68,14 @@ main {
     background: transparent;
     border: 1px solid red;
     filter: sepia(1) saturate(10000%) hue-rotate(0deg);
+  }
+}
+
+/* ===========
+MEDIA - QUERIES
+==============*/
+@media (max-width: 1024px) {
+  .contact {
+    flex-direction: column;
   }
 }

@@ -2,7 +2,7 @@
 
 main {
   padding-block: 100px;
-  padding-inline: 64px;
+  padding-inline: clamp(24px, 3vw, 64px);
   position: relative;
   overflow-x: hidden;
 }
@@ -12,32 +12,32 @@ main {
   max-width: 680px;
   > h1 {
     font-family: "Baloo 2";
-    font-size: 100px;
+    font-size: clamp(64px, 11vw, 100px);
     font-weight: 600;
     color: #57e8a2;
     line-height: 0.8;
   }
   > p {
-    font-size: 23px;
+    font-size: clamp(18px, 4vw, 23px);
   }
 }
 
 .ellipse-one {
-  width: 100px;
+  width: clamp(45px, 10vw, 100px);
   position: absolute;
   top: 40px;
-  left: 500px;
+  left: clamp(250px, 60vw, 500px);
 }
 
 .ellipse-two {
-  width: 180px;
+  width: clamp(70px, 13vw, 180px);
   position: absolute;
-  right: 100px;
-  top: 200px;
+  right: 60px;
+  top: 230px;
 }
 
 .ellipse-three {
-  width: 400px;
+  width: clamp(300px, 4vw, 400px);
   position: absolute;
   left: -200px;
   top: 550px;
@@ -45,9 +45,9 @@ main {
 }
 
 .ellipse-four {
-  width: 650px;
+  width: clamp(250px, 60vw, 650px);
   position: absolute;
-  top: 850px;
+  top: 800px;
   right: -325px;
   z-index: -1;
 }
@@ -76,5 +76,63 @@ main {
 
 .projects {
   margin-top: 100px;
-  @include dflexColumn($g: 150px, $ai: flex-start);
+  @include dflexColumn($g: clamp(100px, 10vw, 150px), $ai: center);
+}
+
+/* =============
+MEDIA - QUERIES
+=============*/
+@media (max-width: 1024px) {
+  .ellipse-four {
+    top: 920px;
+    right: -300px;
+  }
+
+  .ellipse-five {
+    display: none;
+  }
+
+  .ellipse-six {
+    top: unset;
+    bottom: 1200px;
+    left: 0;
+  }
+
+  .ellipse-seven {
+    top: unset;
+    bottom: 400px;
+  }
+}
+
+@media (max-width: 680px) {
+  .ellipse-three {
+    top: 350px;
+    left: -215px;
+  }
+  .ellipse-four {
+    right: -150px;
+  }
+
+  .ellipse-six {
+    bottom: 1000px;
+  }
+
+  .ellipse-seven {
+    right: 0;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 450px) {
+  .ellipse-four {
+    right: -50px;
+  }
+
+  .ellipse-six {
+    left: -100px;
+  }
+
+  .ellipse-seven {
+    bottom: 580px;
+  }
 }

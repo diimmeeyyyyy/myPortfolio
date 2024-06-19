@@ -3,10 +3,12 @@
 main {
   width: 100%;
   display: flex;
-  gap: 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(24px, 3vw, 80px);
   > section img {
-    height: 400px;
-    width: 620px;
+    height: clamp(215px, 40vw, 400px);
+    width: clamp(330px, 61vw, 620px);
     transition: transform 0.3s ease-in-out;
     &:hover {
       box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
@@ -15,19 +17,13 @@ main {
   }
 }
 
-.row {
-  flex-direction: row;
-}
-.row-reverse {
-  flex-direction: row-reverse;
-}
-
 .align-items-start {
   align-items: flex-start !important;
+  text-align: start;
 }
 
 .project-information {
-  @include dflexColumn($g: 32px, $ai: flex-end);
+  @include dflexColumn($g: 32px, $ai: center);
   width: 50%;
   > h1 {
     color: rgba(87, 232, 162, 1);
@@ -44,11 +40,11 @@ main {
   }
   > p {
     font-size: 16px;
-    text-align: end;
+    text-align: center;
   }
   > div {
     display: flex;
-    gap: 80px;
+    gap: clamp(32px, 3vw, 80px);
   }
 }
 
@@ -62,6 +58,36 @@ main {
   cursor: pointer;
 } */
 
-.text-align-start {
-  text-align: start !important;
+/* ===========
+MEDIA - QUERIES
+===============*/
+@media (min-width: 1025px) {
+  .project-container.row {
+    flex-direction: row;
+    > section:nth-of-type(2) {
+      align-items: flex-start;
+      > p {
+        text-align: start;
+      }
+    }
+  }
+
+  .project-container.row-reverse {
+    flex-direction: row-reverse;
+    > section:nth-of-type(2) {
+      align-items: flex-end;
+      > p {
+        text-align: end;
+      }
+      > h2 {
+        text-align: end;
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .project-information {
+    width: auto;
+  }
 }

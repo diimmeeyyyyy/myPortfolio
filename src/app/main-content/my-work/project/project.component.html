@@ -1,14 +1,11 @@
-<main [ngClass]="index % 2 === 0 ? 'row' : 'row-reverse'">
+<main class="project-container" [ngClass]="getContainerClass(index)">
   <section>
     <img [src]="projectData.img" loading="eager" />
   </section>
-  <section
-    class="project-information"
-    [ngClass]="{ 'align-items-start': index % 2 === 0 }"
-  >
+  <section class="project-information">
     <h1>{{ projectData.title }}</h1>
     <h2>{{ projectData.skills }}</h2>
-    <p [ngClass]="{ 'text-align-start': index % 2 === 0 }">
+    <p class="project-description">
       {{ projectData.description }}
     </p>
     <div>
@@ -23,3 +20,5 @@
     </div>
   </section>
 </main>
+
+<!-- [ngClass]="getProjectClass(index)" -->
