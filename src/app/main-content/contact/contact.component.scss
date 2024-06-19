@@ -2,8 +2,8 @@
 
 main {
   position: relative;
-  padding-block: 100px;
-  padding-inline: 64px;
+  padding-block: clamp(32px, 3vw, 100px);
+  padding-inline: clamp(24px, 3vw, 64px);
   background: linear-gradient(179.99deg, #ffffff 12.89%, #d7ffec 91.39%);
 
   > h1 {
@@ -18,13 +18,17 @@ main {
 .contact {
   display: flex;
   gap: 20px;
-  margin-top: 80px;
+  margin-top: clamp(24px, 10vw, 80px);
 }
 
 .contact-text {
-  @include dflexColumn($g: 50px, $ai: flex-start, $jc: flex-start);
+  @include dflexColumn(
+    $g: clamp(24px, 7vw, 50px),
+    $ai: flex-start,
+    $jc: flex-start
+  );
   > h2 {
-    font-size: 32px;
+    font-size: clamp(23px, 5vw, 32px);
     font-weight: 700;
     line-height: 38.4px;
     text-align: left;
@@ -77,5 +81,23 @@ MEDIA - QUERIES
 @media (max-width: 1024px) {
   .contact {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .go-up {
+    bottom: 32px;
+  }
+
+  .ellipse-one {
+    width: 250px;
+    position: absolute;
+    left: 30%;
+    top: 400px;
+  }
+
+  .ellipse-two {
+    width: 45px;
+    bottom: 75px;
+    right: 32px;
   }
 }

@@ -69,3 +69,13 @@ section {
     }
   }
 }
+
+/* ===========
+MEDIA - QUERIES
+==============*/
+@media (max-width: 680px) {
+  section {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
