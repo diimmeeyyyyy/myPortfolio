@@ -11,18 +11,17 @@ main {
   }
   > div h1 {
     font-family: "Baloo 2";
-    font-size: 100px;
+    font-size: clamp(64px, 11vw, 100px);
     color: white;
   }
 }
 
 .all-skills {
-  @include dflexColumn($g: 100px);
-}
-
-.skill-group {
-  display: flex;
-  gap: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: clamp(32px, 10vw, 50px);
+  column-gap: clamp(32px, 10vw, 250px);
+  justify-content: center;
 }
 
 .one-skill {
@@ -38,6 +37,7 @@ main {
 
   > img {
     transition: transform 0.3s ease-in-out;
+    height: clamp(60px, 9vw, 75px);
   }
 
   &:hover {
@@ -47,5 +47,15 @@ main {
     > figcaption {
       font-weight: bold;
     }
+  }
+}
+
+/* ============
+MEDIA - QUERIES
+================*/
+@media (max-width: 550px) {
+  .all-skills {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
   }
 }

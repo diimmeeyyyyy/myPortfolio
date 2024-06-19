@@ -27,13 +27,14 @@ h4 {
 }
 
 .button-settings {
-  padding: 15px 30px;
+  padding-block: clamp(13px, 5vw, 15px);
+  padding-inline: clamp(24px, 5vw, 30px);
   border: 2px solid #57e8a2;
   border-radius: 10px;
   color: #57e8a2;
   cursor: pointer;
   background-color: transparent;
-  font-size: 23px;
+  font-size: clamp(18px, 4vw, 23px);
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
   &:hover {

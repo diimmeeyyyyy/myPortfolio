@@ -2,8 +2,8 @@
 
 main {
   position: relative;
-  padding-block: 150px;
-  padding-inline: 64px;
+  padding-block: clamp(100px, 20vw, 150px);
+  padding-inline: clamp(24px, 6vw, 64px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,6 +43,7 @@ MEDIA - QUERIES
   main {
     > img {
       width: 60px;
+      top: 24px;
     }
   }
 }
