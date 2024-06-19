@@ -7,16 +7,16 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: clamp(24px, 5vw, 50px);
   > img {
     width: 82px;
     position: absolute;
     top: 40px;
-    right: 200px;
+    right: 10%;
   }
   > section:nth-of-type(1) {
     font-family: "Baloo 2";
-    font-size: 100px;
+    font-size: clamp(64px, 11vw, 100px);
     font-weight: 600;
     color: #57e8a2;
     line-height: 0.8;
@@ -25,7 +25,24 @@ main {
     }
   }
   > section:nth-of-type(2) {
-    @include dflexColumn($g: 20px);
-    font-size: 23px;
+    @include dflexColumn($g: clamp(24px, 5vw, 50px));
+    font-size: clamp(18px, 4vw, 23px);
+  }
+}
+
+/* ==========
+MEDIA - QUERIES
+=============*/
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    > img {
+      width: 60px;
+    }
   }
 }

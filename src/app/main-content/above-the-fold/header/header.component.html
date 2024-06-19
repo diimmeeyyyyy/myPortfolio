@@ -1,8 +1,36 @@
 <main>
   <img src="/assets/img/logo.png" alt="" />
-  <nav>
+  <nav class="display-menu">
     <a href="#About-Me">About me</a>
     <a href="#Skill-Set">Skill set</a>
     <a href="#">My work</a>
+  </nav>
+
+  <nav class="display-hamburger-menu">
+    <div class="navbar">
+      <div class="container nav-container">
+        <input
+          class="checkbox"
+          type="checkbox"
+          (change)="onCheckboxChange($event)"
+          [(ngModel)]="hamburgerMenuOpen"
+          name=""
+          id=""
+        />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <div class="menu-items">
+          <li>
+            <a>About me</a>
+          </li>
+          <li><a>Skill set</a></li>
+          <li><a>My work</a></li>
+          <li><a>Contact</a></li>
+        </div>
+      </div>
+    </div>
   </nav>
 </main>

@@ -3,12 +3,7 @@
 main {
   position: relative;
   height: 100vh;
-   background: linear-gradient(to bottom, white, rgb(215, 255, 235));
-  > .corner-ellipse {
-    position: absolute;
-    top: -50px;
-    left: -150px;
-  }
+  background: linear-gradient(to bottom, white, rgb(215, 255, 235));
 }
 
 .headline {
@@ -18,11 +13,11 @@ main {
   color: #57e8a2;
   @include dflexColumn($g: 10px, $ai: flex-start);
   > p {
-    font-size: clamp(36px, 5vw, 64px);
+    font-size: clamp(25px, 4vw, 64px);
   }
   > div {
     line-height: 0.7;
-    font-size: clamp(72px, 9vw, 128px);
+    font-size: clamp(50px, 8vw, 128px);
     font-family: "Baloo 2";
     font-weight: 800;
   }
@@ -41,6 +36,13 @@ main {
       transform: translateX(-15px);
     }
   }
+}
+
+.corner-ellipse {
+  position: absolute;
+  top: -50px;
+  left: clamp(-150px, 3vw, -320px);
+  width: 650px;
 }
 
 .bottom-ellipse {
@@ -65,5 +67,36 @@ main {
     background-color: #57e8a2;
     width: 2px;
     height: 300px;
+  }
+}
+
+/* ===========
+MEDIA - QUERIES
+==============*/
+@media (max-width: 1024px) {
+  .scroll-down,
+  .connect-with-me {
+    display: none;
+  }
+
+  .headline {
+    color: white;
+    left: 32px;
+  }
+}
+
+@media (max-width: 850px) {
+  .corner-ellipse {
+    left: -230px;
+  }
+}
+
+@media (max-width: 650px) {
+  .corner-ellipse {
+    left: -300px;
+  }
+  .bottom-ellipse {
+    width: 150px;
+    bottom: -75px;
   }
 }
