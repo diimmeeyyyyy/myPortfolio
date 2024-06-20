@@ -74,6 +74,14 @@ section {
 MEDIA - QUERIES
 ==============*/
 @media (max-width: 680px) {
+  main {
+    height: 300px;
+    > a {
+      bottom: 24px;
+      left: 50%;
+    }
+  }
+
   section {
     flex-direction: column;
     gap: 24px;

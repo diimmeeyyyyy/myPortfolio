@@ -8,6 +8,8 @@ main {
   align-items: center;
   > img {
     z-index: 1;
+    width: 65px;
+    height: 65px;
   }
 }
 .display-menu {
@@ -85,7 +87,7 @@ HAMBURGER - MENU
   height: 30px;
   width: 32px;
   top: 13px;
-  right: 20px;
+  right: -20px;
   z-index: 5;
   opacity: 0;
   cursor: pointer;
@@ -97,7 +99,7 @@ HAMBURGER - MENU
   width: 32px;
   position: absolute;
   top: 17px;
-  right: 20px;
+  right: -20px;
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -132,9 +134,8 @@ HAMBURGER - MENU
   right: 0;
   bottom: 0;
   left: 0;
-  padding-top: 120px;
-  background: linear-gradient(179.99deg, #ffffff 12.89%, #d7ffec 91.39%);
-
+  padding-top: 150px;
+  background: linear-gradient(179.99deg, #ffffff -7.11%, #d7ffec 38.39%);
   height: 100vh;
   transform: translate(-150%);
   display: flex;
@@ -150,6 +151,14 @@ HAMBURGER - MENU
   margin-bottom: 1.2rem;
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.navbar .menu-items img {
+  height: 65px;
+  width: 65px;
+  position: absolute;
+  top: 32px;
+  left: 80px;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {

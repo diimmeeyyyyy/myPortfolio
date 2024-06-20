@@ -14,6 +14,7 @@
       (blur)="blurInputfield('name')"
     >
       <input
+        ((focus))="focusInputField('name')"
         (blur)="blurInputfield('name')"
         #Name_Input
         #name="ngModel"
@@ -39,16 +40,17 @@
         'invalid-input-value': email.invalid && focusOnEmail,
         'valid-input-value': email.valid && focusOnEmail
       }"
-      (click)="focusInputField('email')"
+      ((click))="focusInputField('email')"
       (blur)="blurInputfield('email')"
     >
       <input
+        (focus)="focusInputField('email')"
         (blur)="blurInputfield('email')"
         [(ngModel)]="contactData.email"
         name="email"
         type="text"
         required
-        pattern="[a-zA-Z0-9._%+]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        pattern="[a-zA-Z0-9._%+]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}"
         placeholder="Your email"
         #email="ngModel"
       />
@@ -67,10 +69,11 @@
         'invalid-input-value-textarea': message.invalid && focusOnMessage,
         'valid-input-value-textarea': message.valid && focusOnMessage
       }"
-      (click)="focusInputField('message')"
+      ((click))="focusInputField('message')"
       (blur)="blurInputfield('message')"
     >
       <textarea
+        (focus)="focusInputField('message')"
         (blur)="blurInputfield('message')"
         [(ngModel)]="contactData.message"
         name="message"
@@ -102,7 +105,7 @@
       >Please accept the privacy policy</span
     >
   </section>
-  
+
   <button
     [class]="
       ContactForm.valid && checkboxChecked
@@ -114,3 +117,5 @@
     Say hello ;)
   </button>
 </form>
+
+<app-notification *ngIf="messageSent"></app-notification>

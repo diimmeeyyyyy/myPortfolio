@@ -1,9 +1,9 @@
 <main>
-  <img src="/assets/img/logo.png" alt="" />
+  <img src="/assets/img/logo.png" />
   <nav class="display-menu">
     <a href="#About-Me">About me</a>
     <a href="#Skill-Set">Skill set</a>
-    <a href="#">My work</a>
+    <a href="#My_Work">My work</a>
   </nav>
 
   <nav class="display-hamburger-menu">
@@ -23,11 +23,12 @@
           <span class="line line3"></span>
         </div>
         <div class="menu-items">
+          <img src="./../../../../assets/img/logo-hamburger-menu.png" />
           <li>
-            <a>About me</a>
+            <a href="#About-Me" (click)="closeMenu()">About me</a>
           </li>
-          <li><a>Skill set</a></li>
-          <li><a>My work</a></li>
+          <li><a href="#Skill-Set" (click)="closeMenu()">Skill set</a></li>
+          <li><a href="#My_Work" (click)="closeMenu()">My work</a></li>
           <li><a>Contact</a></li>
         </div>
       </div>

@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { NotificationComponent } from './notification/notification.component';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, NotificationComponent],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
@@ -91,7 +92,7 @@ export class ContactFormComponent {
     message: '',
   };
 
-  mailTest = false;
+  mailTest = true;
 
   post = {
     endPoint: 'https://dimitrios-kapetanis.com/sendMail.php',
@@ -105,7 +106,6 @@ export class ContactFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    debugger;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
@@ -119,7 +119,16 @@ export class ContactFormComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      this.messageWasSentSuccessfully();
       ngForm.resetForm();
     }
+  }
+
+  messageSent: boolean = false;
+  messageWasSentSuccessfully() {
+    this.messageSent = true;
+    setTimeout(() => {
+      this.messageSent = false;
+    }, 4000);
   }
 }

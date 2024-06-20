@@ -3,19 +3,19 @@
 .contact-form {
   @include dflexColumn($g: 20px);
   width: min-content;
+  > section {
+    z-index: 1;
+  }
 }
 
 .input-wrapper {
   position: relative;
   cursor: pointer;
-  /* width: 460px; */
   width: clamp(250px, 42vw, 460px);
   border-radius: 10px;
   border: 1px solid rgba(87, 232, 162, 1);
   font-size: 16px;
   padding: 15px 45px;
-  /* padding-block: 15px;
-  padding-inline: clamp(25px, 5vw, 45px); */
   background-color: white;
   &:not(:focus):hover {
     border: 2px solid rgba(87, 232, 162, 1);
@@ -29,7 +29,6 @@
     font-family: "Montserrat";
     border: none;
     outline: none;
-    /* width: 460px; */
     width: clamp(250px, 42vw, 460px);
     font-size: 16px;
     cursor: pointer;
@@ -112,6 +111,7 @@
 .error-message {
   color: red;
   font-size: 14px;
+  z-index: 2;
 }
 
 .valid-input-value {
