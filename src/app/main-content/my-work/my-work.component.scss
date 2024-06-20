@@ -4,7 +4,7 @@ main {
   padding-block: 100px;
   padding-inline: clamp(24px, 3vw, 64px);
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .headline {
@@ -68,6 +68,7 @@ main {
 }
 
 .ellipse-seven {
+  display: none;
   width: 100px;
   position: absolute;
   right: 100px;

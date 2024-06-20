@@ -5,11 +5,19 @@
     <p>© Dimitrios Kapetanis 2024</p>
 
     <div>
-      <img src="./../../../assets/img/Github button footer.png" />
-      <img src="./../../../assets/img/Email button footer.png" />
-      <img src="./../../../assets/img/Linkedin button footer.png" />
+      <a href="https://github.com/diimmeeyyyyy">
+        <img src="./../../../assets/img/Github button footer.png" />
+      </a>
+      <a href="mailto:dimitrioskapetanis1996@gmail.com">
+        <img src="./../../../assets/img/Email button footer.png" />
+      </a>
+      <a href="#">
+        <img src="./../../../assets/img/Linkedin button footer.png" />
+      </a>
     </div>
   </section>
 
-  <a href="#">Imprint</a>
+  <a (click)="openImprint()">Imprint</a>
 </main>
+
+<app-imprint *ngIf="imprintIsOpen" (closeImprint)="onImprintClose()"></app-imprint>

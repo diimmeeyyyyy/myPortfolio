@@ -12,6 +12,7 @@ main {
   align-items: center;
   position: relative;
   > a {
+    cursor: pointer;
     position: absolute;
     bottom: 50px;
     text-decoration: none;
@@ -61,7 +62,7 @@ section {
     display: flex;
     gap: 42px;
     align-items: center;
-    > img {
+    > a img {
       cursor: pointer;
       &:hover {
         transform: scale(1.2);

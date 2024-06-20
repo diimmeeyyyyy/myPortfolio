@@ -38,12 +38,14 @@ export class MyWorkComponent {
       github: 'https://github.com/diimmeeyyyyy/join',
       livetest: 'https://dimitrios-kapetanis.com/join',
     },
-    {
+    /* {
       title: 'Olympia - Grill',
       skills: 'Angular | Typescript | HTML | CSS | Firebase',
       description:
         'Website for my parents restaurant where clients can individually select and pre-order their food',
       img: 'assets/img/join.png',
-    },
+
+      //UND NOCH ELLIPSE-SEVEN AUF DISPLAY:FLEX SETZEN WIEDER
+    }, */
   ];
 }
