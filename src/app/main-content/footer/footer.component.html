@@ -20,4 +20,7 @@
   <a (click)="openImprint()">Imprint</a>
 </main>
 
-<app-imprint *ngIf="imprintIsOpen" (closeImprint)="onImprintClose()"></app-imprint>
+<app-imprint
+  *ngIf="imprintIsOpen"
+  (closeImprint)="onImprintClose()"
+></app-imprint>

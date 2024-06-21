@@ -42,10 +42,10 @@ main {
 }
 
 .ellipse-one {
-  width: 200px;
+  width: clamp(140px, 24vw, 250px);
   position: absolute;
-  left: 250px;
-  top: 500px;
+  left: 15%;
+  top: 60%;
 }
 
 .ellipse-two {
@@ -89,15 +89,20 @@ MEDIA - QUERIES
   }
 
   .ellipse-one {
-    width: 250px;
     position: absolute;
-    left: 30%;
-    top: 400px;
+    left: 50%;
+    top: 40%;
   }
 
   .ellipse-two {
     width: 45px;
     bottom: 75px;
     right: 32px;
+  }
+}
+
+@media (max-width: 390px) {
+  h4 {
+    padding-right: 50px;
   }
 }

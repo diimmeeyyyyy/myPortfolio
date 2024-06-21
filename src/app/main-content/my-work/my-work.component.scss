@@ -25,21 +25,21 @@ main {
 .ellipse-one {
   width: clamp(45px, 10vw, 100px);
   position: absolute;
-  top: 40px;
+  top: 1%;
   left: clamp(250px, 60vw, 500px);
 }
 
 .ellipse-two {
   width: clamp(70px, 13vw, 180px);
   position: absolute;
-  right: 60px;
-  top: 230px;
+  right: 10%;
+  top: 10%;
 }
 
 .ellipse-three {
   width: clamp(300px, 4vw, 400px);
   position: absolute;
-  left: -200px;
+  left: -10%;
   top: 550px;
   z-index: -1;
 }
@@ -95,7 +95,7 @@ MEDIA - QUERIES
 
   .ellipse-six {
     top: unset;
-    bottom: 1200px;
+    bottom: 20%;
     left: 0;
   }
 
@@ -105,18 +105,21 @@ MEDIA - QUERIES
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 750px) {
   .ellipse-three {
-    top: 350px;
+    top: 15%;
     left: -215px;
   }
+}
+
+@media (max-width: 680px) {
   .ellipse-four {
     right: -150px;
   }
 
-  .ellipse-six {
+  /* .ellipse-six {
     bottom: 1000px;
-  }
+  } */
 
   .ellipse-seven {
     right: 0;
@@ -129,10 +132,10 @@ MEDIA - QUERIES
     right: -50px;
   }
 
-  .ellipse-six {
+  /*  .ellipse-six {
     left: -100px;
   }
-
+ */
   .ellipse-seven {
     bottom: 580px;
   }

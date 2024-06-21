@@ -10,6 +10,7 @@ main {
   justify-content: center;
   align-items: flex-start;
   > div {
+    animation: fadeInScaleUp 0.5s ease-out forwards;
     position: relative;
     width: 50vw;
     background-color: white;
@@ -33,6 +34,25 @@ main {
         background-color: lightcoral;
         border-radius: 50%;
       }
+    }
+  }
+}
+
+@keyframes fadeInScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 680px) {
+  main {
+    > div {
+      width: 100%;
     }
   }
 }
