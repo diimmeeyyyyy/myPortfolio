@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class HeaderComponent {
   hamburgerMenuOpen = false;
+  activeMenuPoint: string = '';
 
   closeMenu() {
     this.hamburgerMenuOpen = false;
@@ -28,5 +29,9 @@ export class HeaderComponent {
 
   screenIsLarge() {
     return window.innerWidth > 1024;
+  }
+
+  setActiveMenuPoint(menuPoint: string) {
+    this.activeMenuPoint = menuPoint;
   }
 }

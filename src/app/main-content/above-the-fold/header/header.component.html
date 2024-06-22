@@ -1,9 +1,24 @@
 <main>
   <img src="/assets/img/logo.png" />
   <nav class="display-menu">
-    <a href="#About-Me">About me</a>
-    <a href="#Skill-Set">Skill set</a>
-    <a href="#My_Work">My work</a>
+    <a
+      href="#About-Me"
+      (click)="setActiveMenuPoint('About-Me')"
+      [ngClass]="{ active: activeMenuPoint === 'About-Me' }"
+      >About me</a
+    >
+    <a
+      href="#Skill-Set"
+      (click)="setActiveMenuPoint('Skill-Set')"
+      [ngClass]="{ active: activeMenuPoint === 'Skill-Set' }"
+      >Skill set</a
+    >
+    <a
+      href="#My_Work"
+      (click)="setActiveMenuPoint('My-Work')"
+      [ngClass]="{ active: activeMenuPoint === 'My-Work' }"
+      >My work</a
+    >
   </nav>
 
   <nav class="display-hamburger-menu">
