@@ -1,13 +1,17 @@
-@import "./../../../../styles.scss";
+@import "./../../styles.scss";
 
 main {
-  height: 117px;
+  height: 14vh;
   padding-inline: clamp(50px, 9vw, 100px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  border-radius: 0 0 100px 100px;
   > img {
-    z-index: 1;
+    z-index: 2000;
     width: 65px;
     height: 65px;
   }
@@ -43,6 +47,11 @@ main {
     width: 50%;
     border-bottom: 3px solid currentColor; // Stil des Unterstrichs
   }
+}
+
+.scrolled {
+  background-color: white;
+  border-bottom: 4px solid #57e8a2;
 }
 
 /* ============

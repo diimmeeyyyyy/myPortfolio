@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -12,6 +12,20 @@ import { FormsModule } from '@angular/forms';
 export class HeaderComponent {
   hamburgerMenuOpen = false;
   activeMenuPoint: string = '';
+  scrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.scrolled = window.scrollY > 1;
+  }
+
+  getHeaderLogo() {
+    if (!this.scrolled) {
+      return '/assets/img/logo.png';
+    } else {
+      return '/assets/img/logo-hamburger-menu.png';
+    }
+  }
 
   closeMenu() {
     this.hamburgerMenuOpen = false;

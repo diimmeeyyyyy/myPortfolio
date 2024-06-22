@@ -4,7 +4,7 @@ import { SkillSetComponent } from './skill-set/skill-set.component';
 import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-main-content',

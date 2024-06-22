@@ -1,5 +1,5 @@
-<main>
-  <img src="/assets/img/logo.png" />
+<main [ngClass]="{'scrolled': scrolled}">
+  <img [src]="getHeaderLogo()" />
   <nav class="display-menu">
     <a
       href="#About-Me"
@@ -38,7 +38,7 @@
           <span class="line line3"></span>
         </div>
         <div class="menu-items">
-          <img src="./../../../../assets/img/logo-hamburger-menu.png" />
+         <!--  <img src="./../../../../assets/img/logo-hamburger-menu.png" /> -->
           <li>
             <a href="#About-Me" (click)="closeMenu()">About me</a>
           </li>
