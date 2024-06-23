@@ -22,15 +22,15 @@
         name="name"
         type="text"
         required
-        placeholder="Your name"
+        [placeholder]="'yourname' | translate"
         minlength="3"
       />
       <img src="/assets/img/Frame.png" *ngIf="name.invalid && focusOnName" />
       <img src="/assets/img/Vector.png" *ngIf="name.valid" />
     </div>
-    <span class="error-message" *ngIf="name.invalid && focusOnName"
-      >Please enter a name</span
-    >
+    <span class="error-message" *ngIf="name.invalid && focusOnName">{{
+      "pleaseentername" | translate
+    }}</span>
   </section>
 
   <section>
@@ -51,15 +51,15 @@
         type="text"
         required
         pattern="[a-zA-Z0-9._%+]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}"
-        placeholder="Your email"
+        [placeholder]="'youremail' | translate"
         #email="ngModel"
       />
       <img src="/assets/img/Frame.png" *ngIf="email.invalid && focusOnEmail" />
       <img src="/assets/img/Vector.png" *ngIf="email.valid" />
     </div>
-    <span class="error-message" *ngIf="email.invalid && focusOnEmail"
-      >Please enter a valid email</span
-    >
+    <span class="error-message" *ngIf="email.invalid && focusOnEmail">{{
+      "pleaseenteremail" | translate
+    }}</span>
   </section>
 
   <section>
@@ -78,7 +78,7 @@
         [(ngModel)]="contactData.message"
         name="message"
         required
-        placeholder="Your message"
+        [placeholder]="'yourmessage' | translate"
         #message="ngModel"
         minlength="5"
       ></textarea>
@@ -88,22 +88,27 @@
       />
       <img src="/assets/img/Vector.png" *ngIf="message.valid" />
     </div>
-    <span class="error-message" *ngIf="message.invalid && focusOnMessage"
-      >Please enter a message</span
-    >
+    <span class="error-message" *ngIf="message.invalid && focusOnMessage">{{
+      "pleaseentermessage" | translate
+    }}</span>
   </section>
 
-  <section>
+  <section class="accept-terms">
     <div class="checkbox">
       <img [src]="checkboxImg" (click)="changeCheckboxImg()" />
       <p>
-        I've read the <a class="privacy-policy">privacy policy</a> and agree to
-        the processing of my data as outlined.
+        {{ "ivereadthe" | translate }}
+        <a
+          class="privacy-policy"
+          [ngClass]="{ 'privacy-policy-german-spanish': isGerman() }"
+          [ngClass]="{ 'privacy-policy-german-spanish': isSpanish() }"
+          >{{ "privacypolicy" | translate }}</a
+        >{{ "andagreethem" | translate }}
       </p>
     </div>
-    <span class="error-message" *ngIf="!checkboxChecked"
-      >Please accept the privacy policy</span
-    >
+    <span class="error-message" *ngIf="!checkboxChecked">{{
+      "pleaseacceptprivacypolicy" | translate
+    }}</span>
   </section>
 
   <button
@@ -114,7 +119,7 @@
     "
     [disabled]="!ContactForm.valid || !checkboxChecked"
   >
-    Say hello ;)
+    {{ "sayhellobutton" | translate }}
   </button>
 </form>
 

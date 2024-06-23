@@ -12,13 +12,11 @@
       <a [href]="projectData.github" target="_blank">
         <button class="button-settings">Github</button>
       </a>
-      <!-- <button class="button-settings">Github</button> -->
       <a [href]="projectData.livetest" target="_blank">
-        <button class="livetest-button">Live test</button>
+        <button class="livetest-button">
+          {{ "livetestbutton" | translate }}
+        </button>
       </a>
-      <!-- <button class="button-settings">Live test</button> -->
     </div>
   </section>
 </main>
-
-<!-- [ngClass]="getProjectClass(index)" -->

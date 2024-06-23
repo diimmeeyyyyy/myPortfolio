@@ -2,11 +2,18 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SelectLanguageComponent } from './select-language/select-language.component';
+import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FormsModule, SelectLanguageComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    SelectLanguageComponent,
+    TranslateModule,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -14,6 +21,10 @@ export class HeaderComponent {
   hamburgerMenuOpen = false;
   activeMenuPoint: string = '';
   scrolled = false;
+
+  constructor(private translateService: TranslateService) {
+    /* this.translateService.use(localStorage.getItem('lang') || 'en'); */
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

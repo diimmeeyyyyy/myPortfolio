@@ -5,22 +5,22 @@
       href="#About-Me"
       (click)="setActiveMenuPoint('About-Me')"
       [ngClass]="{ active: activeMenuPoint === 'About-Me' }"
-      >About me</a
+      >{{ "aboutme" | translate }}</a
     >
     <a
       href="#Skill-Set"
       (click)="setActiveMenuPoint('Skill-Set')"
       [ngClass]="{ active: activeMenuPoint === 'Skill-Set' }"
-      >Skill set</a
+      >{{ "skillset" | translate }}</a
     >
     <a
       href="#My_Work"
       (click)="setActiveMenuPoint('My-Work')"
       [ngClass]="{ active: activeMenuPoint === 'My-Work' }"
-      >My work</a
+      >{{ "mywork" | translate }}</a
     >
 
-   <app-select-language></app-select-language>
+    <app-select-language></app-select-language>
   </nav>
 
   <nav class="display-hamburger-menu">

@@ -1,5 +1,5 @@
 <main>
-  <h1>Contact</h1>
+  <h1>{{ "contact" | translate }}</h1>
   <img class="ellipse-one" src="/assets/img/Ellipse 9.png" />
   <img class="ellipse-two" src="/assets/img/Ellipse 9.png" />
   <a href="#Landing_Page">
@@ -17,13 +17,14 @@
 
   <section class="contact">
     <div class="contact-text">
-      <h2>Got a problem to solve?</h2>
+      <h2>{{ "gotaproblemtosolve" | translate }}</h2>
       <p>
-        Feel free to contact me through this form. I'm interested in hearing
-        from you, learning about your ideas, and possibly contributing to your
-        projects with my work.
+        {{ "contacttext" | translate }}
       </p>
-      <h4>Need a Frontend developer? <b>Contact me!</b></h4>
+      <h4>
+        {{ "needfrontenddeveloper" | translate }}
+        <b>{{ "contactme" | translate }}</b>
+      </h4>
     </div>
 
     <app-contact-form></app-contact-form>

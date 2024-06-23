@@ -1,21 +1,39 @@
 import { Component } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [ProjectComponent, CommonModule],
+  imports: [ProjectComponent, CommonModule, TranslateModule],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkComponent {
+  constructor(private translateService: TranslateService) {}
+
+  ngOnInit() {
+    this.translateService
+      .get('pollolocodescription')
+      .subscribe((res: string) => {
+        this.projects[0].description = res;
+      });
+
+    this.translateService.get('pokedexdescription').subscribe((res: string) => {
+      this.projects[1].description = res;
+    });
+    this.translateService.get('joindescription').subscribe((res: string) => {
+      this.projects[2].description = res;
+    });
+  }
+
   projects = [
     {
       title: 'Pollo Loco',
       skills: 'Javascript | HTML | CSS',
-      description:
-        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      description: '',
       img: 'assets/img/polloLoco.png',
       github: 'https://github.com/diimmeeyyyyy/El_Pollo_Loco',
       livetest: 'https://dimitrios-kapetanis.com/ElPolloLoco/index',
@@ -23,8 +41,7 @@ export class MyWorkComponent {
     {
       title: 'Pokédex',
       skills: 'Javascript | HTML | CSS | API',
-      description:
-        'Based on the PokéAPI, a simple library that provides and catalogues pokemon information.',
+      description: '',
       img: 'assets/img/pokedex.png',
       github: 'https://github.com/diimmeeyyyyy/Pokedex',
       livetest: 'https://dimitrios-kapetanis.com/pokedex/index',
@@ -32,8 +49,7 @@ export class MyWorkComponent {
     {
       title: 'Join',
       skills: 'Javascript | HTML | CSS',
-      description:
-        'Task manager inspired by the kanban system. Create and organize tasks using drag & drop functions, assign users and categories.',
+      description: '',
       img: 'assets/img/join.png',
       github: 'https://github.com/diimmeeyyyyy/join',
       livetest: 'https://dimitrios-kapetanis.com/join',
