@@ -1,0 +1,23 @@
+<section class="custom-select" (click)="toggleDropdown()">
+    <img [src]="selectedLanguage" class="selected-flag" />
+    <div *ngIf="showLanguageOptions" class="options">
+      <div
+        (click)="selectLanguage($event, 'en', '/assets/img/english.png')"
+        class="language-option"
+      >
+        <img src="./../../assets/img/english.png" />
+      </div>
+      <div
+        (click)="selectLanguage($event, 'de', '/assets/img/german.png')"
+        class="language-option"
+      >
+        <img src="./../../assets/img/german.png" />
+      </div>
+      <div
+        (click)="selectLanguage($event, 'es', '/assets/img/spanish.png')"
+        class="language-option"
+      >
+        <img src="./../../assets/img/spanish.png" />
+      </div>
+    </div>
+  </section>

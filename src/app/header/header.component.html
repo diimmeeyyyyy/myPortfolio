@@ -1,4 +1,4 @@
-<main [ngClass]="{'scrolled': scrolled}">
+<main [ngClass]="{ scrolled: scrolled }">
   <img [src]="getHeaderLogo()" />
   <nav class="display-menu">
     <a
@@ -19,6 +19,8 @@
       [ngClass]="{ active: activeMenuPoint === 'My-Work' }"
       >My work</a
     >
+
+   <app-select-language></app-select-language>
   </nav>
 
   <nav class="display-hamburger-menu">
@@ -38,7 +40,7 @@
           <span class="line line3"></span>
         </div>
         <div class="menu-items">
-         <!--  <img src="./../../../../assets/img/logo-hamburger-menu.png" /> -->
+          <img *ngIf="getHamburgerMenuLogo()" [src]="getHamburgerMenuLogo()" />
           <li>
             <a href="#About-Me" (click)="closeMenu()">About me</a>
           </li>

@@ -18,6 +18,7 @@ main {
 }
 .display-menu {
   display: flex;
+  align-items: center;
   gap: 36px;
   position: relative;
   > a {
@@ -50,7 +51,7 @@ main {
 }
 
 .scrolled {
-  background-color: white;
+  background: linear-gradient(to bottom, white, rgb(215, 255, 235));
   border-bottom: 4px solid #57e8a2;
 }
 

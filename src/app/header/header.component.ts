@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { SelectLanguageComponent } from './select-language/select-language.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, SelectLanguageComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -24,6 +25,14 @@ export class HeaderComponent {
       return '/assets/img/logo.png';
     } else {
       return '/assets/img/logo-hamburger-menu.png';
+    }
+  }
+
+  getHamburgerMenuLogo() {
+    if (window.innerWidth < 1024 && !this.scrolled) {
+      return '/assets/img/logo-hamburger-menu.png';
+    } else {
+      return '';
     }
   }
 

@@ -1,0 +1,40 @@
+/* ===========
+LANGUAGE SELECTION
+===============*/
+.custom-select {
+    position: relative;
+    cursor: pointer;
+    width: auto;
+    border: 1px solid #ccc;
+  }
+  
+  .selected-flag {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+  }
+  
+  .options div {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .options div:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .language-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
