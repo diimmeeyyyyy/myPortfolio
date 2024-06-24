@@ -3,6 +3,26 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, white, rgb(215, 255, 235));
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(128.95deg, #57e8a2 32.52%, #33b476 104.12%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    128.95deg,
+    darken(#57e8a2, 20%) 32.52%,
+    #33b476 104.12%
+  );
+}
+
 body {
   margin: 0;
   padding: 0;

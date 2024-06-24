@@ -45,6 +45,15 @@ main {
   width: 650px;
 }
 
+.portfolio-foto {
+  position: absolute;
+  bottom: 0;
+  height: 715px;
+  left: 160px;
+  width: 340px;
+  object-fit: cover;
+}
+
 .bottom-ellipse {
   width: 200px;
   position: absolute;
@@ -82,6 +91,13 @@ MEDIA - QUERIES
   .headline {
     color: white;
     left: 32px;
+    top: 0;
+  }
+
+  .portfolio-foto {
+    left: 60%;
+    width: auto;
+    height: clamp(600px, 95vw, 715px);
   }
 }
 
@@ -98,6 +114,11 @@ MEDIA - QUERIES
   .bottom-ellipse {
     width: 150px;
     bottom: -75px;
+  }
+
+  .portfolio-foto {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
