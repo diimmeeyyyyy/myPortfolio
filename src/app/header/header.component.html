@@ -1,5 +1,9 @@
-<main [ngClass]="{ scrolled: scrolled }">
-  <img [src]="getHeaderLogo()" />
+<main [ngClass]="{ scrolled: stickyMenu() }">
+  <img
+    [src]="getHeaderLogo()"
+    (click)="scrollToTop()"
+    [ngClass]="{ 'disappear-logo': disappearLogo() }"
+  />
   <nav class="display-menu">
     <a
       href="#About-Me"
@@ -23,32 +27,52 @@
     <app-select-language></app-select-language>
   </nav>
 
-  <nav class="display-hamburger-menu">
-    <div class="navbar">
-      <div class="container nav-container">
-        <input
-          class="checkbox"
-          type="checkbox"
-          (change)="onCheckboxChange($event)"
-          [(ngModel)]="hamburgerMenuOpen"
-          name=""
-          id=""
-        />
-        <div class="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
-        </div>
-        <div class="menu-items">
-          <img *ngIf="getHamburgerMenuLogo()" [src]="getHamburgerMenuLogo()" />
-          <li>
-            <a href="#About-Me" (click)="closeMenu()">About me</a>
-          </li>
-          <li><a href="#Skill-Set" (click)="closeMenu()">Skill set</a></li>
-          <li><a href="#My_Work" (click)="closeMenu()">My work</a></li>
-          <li><a>Contact</a></li>
+  <section class="arrange-small-screen-header">
+    <app-select-language class="select-language-small-screen"></app-select-language>
+    <nav class="display-hamburger-menu">
+      <div class="navbar">
+        <div class="container nav-container">
+          <input
+            class="checkbox"
+            type="checkbox"
+            (change)="onCheckboxChange($event)"
+            [(ngModel)]="hamburgerMenuOpen"
+            name=""
+            id=""
+          />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <div class="menu-items">
+            <img
+              *ngIf="getHamburgerMenuLogo() && !isImprintPage()"
+              [src]="getHamburgerMenuLogo()"
+            />
+            <li>
+              <a href="#About-Me" (click)="closeMenu()">{{
+                "aboutme" | translate
+              }}</a>
+            </li>
+            <li>
+              <a href="#Skill-Set" (click)="closeMenu()">{{
+                "skillset" | translate
+              }}</a>
+            </li>
+            <li>
+              <a href="#My_Work" (click)="closeMenu()">{{
+                "mywork" | translate
+              }}</a>
+            </li>
+            <li>
+              <a href="#Contact" (click)="closeMenu()">{{
+                "contact" | translate
+              }}</a>
+            </li>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </section>
 </main>

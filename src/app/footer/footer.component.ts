@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ImprintComponent } from './imprint/imprint.component';
+import { ImprintComponent } from '../imprint/imprint.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -11,13 +12,18 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
+  constructor(private router: Router) {}
   imprintIsOpen: boolean = false;
 
-  openImprint() {
+ /*  openImprint() {
     this.imprintIsOpen = true;
-  }
+  } */
 
-  onImprintClose() {
+  /* onImprintClose() {
     this.imprintIsOpen = false;
+  } */
+
+  navigateToImprint() {
+    this.router.navigate(['/imprint']);
   }
 }

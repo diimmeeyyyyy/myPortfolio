@@ -11,6 +11,7 @@ main {
   top: 0;
   border-radius: 0 0 100px 100px;
   > img {
+    cursor: pointer;
     z-index: 2000;
     width: 65px;
     height: 65px;
@@ -19,7 +20,7 @@ main {
 .display-menu {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: clamp(16px, 1vw, 36px);
   position: relative;
   > a {
     position: relative;
@@ -53,6 +54,10 @@ main {
 .scrolled {
   background: linear-gradient(to bottom, white, rgb(215, 255, 235));
   border-bottom: 4px solid #57e8a2;
+}
+
+.disappear-logo {
+  z-index: 1 !important;
 }
 
 /* ============
@@ -205,12 +210,27 @@ HAMBURGER - MENU
   display: none;
 }
 
+.arrange-small-screen-header,
+.select-language-small-screen {
+  display: none;
+}
+
 /* =========
 MEDIA - QUERIES
 ============*/
 @media (max-width: 1024px) {
   .display-menu {
     display: none;
+  }
+
+  .arrange-small-screen-header {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .select-language-small-screen {
+    display: flex;
   }
 
   .display-hamburger-menu {

@@ -23,6 +23,13 @@
   );
 }
 
+:target:before {
+  content: "";
+  display: block;
+  height: 120px;
+  margin: -120px 0 0;
+}
+
 body {
   margin: 0;
   padding: 0;

@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { SelectLanguageComponent } from './select-language/select-language.component';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { Location } from '@angular/common'; // Import hinzufügen
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +24,11 @@ export class HeaderComponent {
   activeMenuPoint: string = '';
   scrolled = false;
 
-  constructor(private translateService: TranslateService) {
+  constructor(
+    private translateService: TranslateService,
+    private location: Location,
+    private router: Router
+  ) {
     /* this.translateService.use(localStorage.getItem('lang') || 'en'); */
   }
 
@@ -31,8 +37,12 @@ export class HeaderComponent {
     this.scrolled = window.scrollY > 1;
   }
 
+  isImprintPage() {
+    return this.location.path() === '/imprint';
+  }
+
   getHeaderLogo() {
-    if (!this.scrolled) {
+    if (!this.scrolled && !this.isImprintPage()) {
       return '/assets/img/logo.png';
     } else {
       return '/assets/img/logo-hamburger-menu.png';
@@ -67,5 +77,27 @@ export class HeaderComponent {
 
   setActiveMenuPoint(menuPoint: string) {
     this.activeMenuPoint = menuPoint;
+  }
+
+  scrollToTop() {
+    this.router.navigateByUrl('/').then(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    });
+  }
+
+  stickyMenu() {
+    return this.scrolled && !this.isImprintPage();
+  }
+
+  disappearLogo() {
+    return window.innerWidth < 1024 && !this.scrolled && this.hamburgerMenuOpen;
+  }
+
+  windowWidthSmallScreen() {
+    return window.innerWidth < 1024;
   }
 }
