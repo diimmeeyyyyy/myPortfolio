@@ -1,5 +1,7 @@
-<div class="wrapper" [ngClass]="{ 'flex-grow': isImprintPage() }">
+<main class="wrapper">
   <app-header></app-header>
-  <router-outlet />
+  <div [ngClass]="{ 'content-grow': isImprintPage() }">
+    <router-outlet></router-outlet>
+  </div>
   <app-footer></app-footer>
-</div>
+</main>

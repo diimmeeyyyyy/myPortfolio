@@ -7,7 +7,7 @@ main {
   overflow: hidden;
 }
 
-.content-wrapper{
+.content-wrapper {
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
@@ -32,8 +32,8 @@ main {
 .ellipse-one {
   width: clamp(45px, 10vw, 100px);
   position: absolute;
-  top: 1%;
-  left: clamp(250px, 60vw, 500px);
+  top: -2%;
+  left: clamp(230px, 60vw, 500px);
 }
 
 .ellipse-two {
@@ -54,7 +54,7 @@ main {
 .ellipse-four {
   width: clamp(250px, 60vw, 650px);
   position: absolute;
-  top: 800px;
+  top: 750px;
   right: -325px;
   z-index: -1;
 }
@@ -114,14 +114,19 @@ MEDIA - QUERIES
 
 @media (max-width: 750px) {
   .ellipse-three {
-    top: 15%;
+    top: 10%;
     left: -215px;
   }
 }
 
 @media (max-width: 680px) {
   .ellipse-four {
-    right: -150px;
+    right: -220px;
+    top: 850px;
+  }
+
+  .ellipse-six {
+    bottom: 15%;
   }
 
   .ellipse-seven {
@@ -132,7 +137,7 @@ MEDIA - QUERIES
 
 @media (max-width: 450px) {
   .ellipse-four {
-    right: -50px;
+    right: -150px;
   }
 
   .ellipse-seven {

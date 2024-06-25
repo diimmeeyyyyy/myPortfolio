@@ -29,5 +29,14 @@
   "andagreethem": "and agree to the processing of my data as outlined.",
   "pleaseacceptprivacypolicy": "Please accept the privacy policy",
   "sayhellobutton": "Say hello ;)",
-  "imprint": "Imprint"
+  "imprint": "Imprint",
+  "informationpursuantto§5TMG":"Information pursuant to § 5 TMG",
+  "representedby":"Represented by:",
+  "phone":"Phone",
+  "disclaimer":"Disclaimer",
+  "liabilityforlinks":"Liability for Links",
+  "imprinttext": "My offer contains links to external websites of third parties, over whose content I have no influence. Therefore, I cannot assume any liability for these external contents. The content of linked pages is always the responsibility of the respective provider or operator of the sites. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, a permanent content control of the linked pages is not reasonable without specific indications of a violation of the law. Upon becoming aware of violations, I will promptly remove such links.",
+  "websitecreatedby":"Website imprint created by",
+  "bythe":"by the",
+  "lawfirm":"law firm Hasselbach"
 }

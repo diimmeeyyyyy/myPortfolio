@@ -1,16 +1,10 @@
-/* .wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-  width: 100%;
-} */
-
-router-outlet {
-  flex-grow: 1;
-  display: block; 
-}
-
-.flex-grow {
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.content-grow {
+  flex-grow: 1;
+  background: linear-gradient(to bottom, white, rgb(215, 255, 235));
 }

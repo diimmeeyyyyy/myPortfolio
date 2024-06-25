@@ -8,7 +8,7 @@
   "presentation": "Ich bin ein 27-jähriger Front-End-Entwickler aus Dortmund, Deutschland. Ich würde gerne Designern und Unternehmen helfen, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Entwicklerkarriere mit einer Position als Junior-Webentwickler zu beginnen.",
   "proposal": "Wenn Sie denken, dass ich gut zu Ihren Projekten passe, kontaktieren Sie mich!",
   "sendmessage": "Nachricht senden",
-  "tryprojects": "Probieren Sie gerne meine neuesten Entwicklungsprojekte aus und schauen Sie sich deren Code an.",
+  "tryprojects": "Probiert gerne meine neuesten Projekte aus und schaut euch deren Code an.",
   "pollolocodescription": "Jump & run Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
   "pokedexdescription": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
   "joindescription": "Ein Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
@@ -28,6 +28,15 @@
   "privacypolicy": "Datenschutzerklärung",
   "andagreethem": "gelesen und stimme dieser zu.",
   "pleaseacceptprivacypolicy": "Bitte akzeptiere die Datenschutzerklärung",
-  "sayhellobutton":"Sag Hallo ;)",
-  "imprint":"Impressum"
+  "sayhellobutton": "Sag Hallo ;)",
+  "imprint": "Impressum",
+  "informationpursuantto§5TMG": "Informationen gemäß § 5 TMG",
+  "representedby": "Repräsentiert durch:",
+  "phone": "Telefon",
+  "disclaimer": "Haftungsausschluss",
+  "liabilityforlinks": "Haftung für Links",
+  "imprinttext":"Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Daher kann ich für diese fremden Inhalte keine Haftung übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.",
+  "websitecreatedby":"Website-Impressum erstellt von",
+  "bythe":"durch die",
+  "lawfirm":"Anwaltskanzlei Hasselbach"
 }

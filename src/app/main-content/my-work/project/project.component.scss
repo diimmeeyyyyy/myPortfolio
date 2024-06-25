@@ -25,6 +25,7 @@ main {
 .project-information {
   @include dflexColumn($g: 32px, $ai: center);
   width: 50%;
+  padding-inline: clamp(24px, 6vw, 64px);
   > h1 {
     color: rgba(87, 232, 162, 1);
     font-family: "Baloo 2";

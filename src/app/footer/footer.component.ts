@@ -23,7 +23,7 @@ export class FooterComponent {
     this.imprintIsOpen = false;
   } */
 
-  navigateToImprint() {
+ /*  navigateToImprint() {
     this.router.navigate(['/imprint']);
-  }
+  } */
 }

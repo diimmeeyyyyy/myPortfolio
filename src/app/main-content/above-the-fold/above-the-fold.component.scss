@@ -58,7 +58,7 @@ main {
   bottom: 0;
   height: 88vh;
   left: 100px;
-  width: 400px;
+  width: clamp(250px, 20vw, 420px);
   object-fit: cover;
 }
 
