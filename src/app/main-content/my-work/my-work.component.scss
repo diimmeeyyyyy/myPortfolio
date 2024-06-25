@@ -7,6 +7,13 @@ main {
   overflow: hidden;
 }
 
+.content-wrapper{
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .headline {
   @include dflexColumn($g: 20px, $ai: flex-start);
   max-width: 680px;
@@ -117,10 +124,6 @@ MEDIA - QUERIES
     right: -150px;
   }
 
-  /* .ellipse-six {
-    bottom: 1000px;
-  } */
-
   .ellipse-seven {
     right: 0;
     z-index: -1;
@@ -132,10 +135,6 @@ MEDIA - QUERIES
     right: -50px;
   }
 
-  /*  .ellipse-six {
-    left: -100px;
-  }
- */
   .ellipse-seven {
     bottom: 580px;
   }

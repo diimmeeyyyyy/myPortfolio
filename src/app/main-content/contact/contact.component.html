@@ -1,32 +1,34 @@
 <main>
-  <h1>{{ "contact" | translate }}</h1>
-  <img class="ellipse-one" src="/assets/img/Ellipse 9.png" />
-  <img class="ellipse-two" src="/assets/img/Ellipse 9.png" />
-  <a href="#Landing_Page">
-    <img
-      class="go-up"
-      [src]="
-        hover
-          ? '/assets/img/arrow-down-line-hover.png'
-          : '/assets/img/arrow-down-line.png'
-      "
-      (mouseover)="hover = true"
-      (mouseout)="hover = false"
-    />
-  </a>
+  <div class="content-wrapper">
+    <h1>{{ "contact" | translate }}</h1>
+    <img class="ellipse-one" src="/assets/img/Ellipse 9.png" />
+    <img class="ellipse-two" src="/assets/img/Ellipse 9.png" />
+    <a href="#Landing_Page">
+      <img
+        class="go-up"
+        [src]="
+          hover
+            ? '/assets/img/arrow-down-line-hover.png'
+            : '/assets/img/arrow-down-line.png'
+        "
+        (mouseover)="hover = true"
+        (mouseout)="hover = false"
+      />
+    </a>
 
-  <section class="contact">
-    <div class="contact-text">
-      <h2>{{ "gotaproblemtosolve" | translate }}</h2>
-      <p>
-        {{ "contacttext" | translate }}
-      </p>
-      <h4>
-        {{ "needfrontenddeveloper" | translate }}
-        <b>{{ "contactme" | translate }}</b>
-      </h4>
-    </div>
+    <section class="contact">
+      <div class="contact-text">
+        <h2>{{ "gotaproblemtosolve" | translate }}</h2>
+        <p>
+          {{ "contacttext" | translate }}
+        </p>
+        <h4>
+          {{ "needfrontenddeveloper" | translate }}
+          <b>{{ "contactme" | translate }}</b>
+        </h4>
+      </div>
 
-    <app-contact-form></app-contact-form>
-  </section>
+      <app-contact-form></app-contact-form>
+    </section>
+  </div>
 </main>

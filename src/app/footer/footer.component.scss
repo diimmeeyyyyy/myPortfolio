@@ -11,14 +11,22 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.content-wrapper {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
   > a {
     cursor: pointer;
     position: absolute;
-    bottom: 50px;
+    bottom: -32px;
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: 400;
+    left: 50%;
     transform: translateX(-50%);
     transition: transform 1s ease-in-out;
     &:hover {
@@ -26,13 +34,13 @@ main {
       &::after {
         content: "";
         display: block;
-        width: 50%; /* Unterstreichungsbreite auf 50% des Elements setzen */
-        height: 2px; /* Höhe der Unterstreichung */
-        background-color: white; /* Farbe der Unterstreichung */
+        width: 50%;
+        height: 2px;
+        background-color: white;
         position: absolute;
-        bottom: -5px; /* Position unter dem Text */
+        bottom: -5px;
         left: 50%;
-        transform: translateX(-50%); /* Zentriert die Unterstreichung */
+        transform: translateX(-50%);
         animation: slideIn 0.5s forwards;
       }
     }

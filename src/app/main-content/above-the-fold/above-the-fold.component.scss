@@ -6,6 +6,14 @@ main {
   background: linear-gradient(to bottom, white, rgb(215, 255, 235));
 }
 
+.content-wrapper {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
 .headline {
   position: absolute;
   top: 100px;
@@ -48,9 +56,9 @@ main {
 .portfolio-foto {
   position: absolute;
   bottom: 0;
-  height: 715px;
-  left: 160px;
-  width: 340px;
+  height: 88vh;
+  left: 100px;
+  width: 400px;
   object-fit: cover;
 }
 
@@ -95,9 +103,9 @@ MEDIA - QUERIES
   }
 
   .portfolio-foto {
-    left: 60%;
+    left: 45%;
     width: auto;
-    height: clamp(600px, 95vw, 715px);
+    height: clamp(70vh, 70vw, 85vh);
   }
 }
 

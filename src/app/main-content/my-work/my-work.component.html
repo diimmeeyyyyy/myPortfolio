@@ -1,24 +1,26 @@
 <main>
-  <section class="headline">
-    <h1>{{ "mywork" | translate }}</h1>
-    <p>
-      {{ "tryprojects" | translate }}
-    </p>
-  </section>
+  <div class="content-wrapper">
+    <section class="headline">
+      <h1>{{ "mywork" | translate }}</h1>
+      <p>
+        {{ "tryprojects" | translate }}
+      </p>
+    </section>
 
-  <img class="ellipse-one" src="./../../../assets/img/Ellipse 9.png" />
-  <img class="ellipse-two" src="./../../../assets/img/Ellipse 9.png" />
-  <img class="ellipse-three" src="./../../../assets/img/Ellipse 9.png" />
-  <img class="ellipse-four" src="./../../../assets/img/Ellipse 9.png" />
-  <img class="ellipse-five" src="./../../../assets/img/Ellipse 9.png" />
-  <img class="ellipse-six" src="./../../../assets/img/Ellipse 9.png" />
-  <img class="ellipse-seven" src="./../../../assets/img/Ellipse 9.png" />
+    <img class="ellipse-one" src="./../../../assets/img/Ellipse 9.png" />
+    <img class="ellipse-two" src="./../../../assets/img/Ellipse 9.png" />
+    <img class="ellipse-three" src="./../../../assets/img/Ellipse 9.png" />
+    <img class="ellipse-four" src="./../../../assets/img/Ellipse 9.png" />
+    <img class="ellipse-five" src="./../../../assets/img/Ellipse 9.png" />
+    <img class="ellipse-six" src="./../../../assets/img/Ellipse 9.png" />
+    <img class="ellipse-seven" src="./../../../assets/img/Ellipse 9.png" />
 
-  <section class="projects">
-    <app-project
-      *ngFor="let project of projects; let i = index"
-      [projectData]="project"
-      [index]="i"
-    ></app-project>
-  </section>
+    <section class="projects">
+      <app-project
+        *ngFor="let project of projects; let i = index"
+        [projectData]="project"
+        [index]="i"
+      ></app-project>
+    </section>
+  </div>
 </main>
