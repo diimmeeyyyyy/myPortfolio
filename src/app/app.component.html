@@ -1,6 +1,6 @@
-<main class="wrapper">
+<main [ngClass]="{ 'wrapper': isImprintPage() || isPrivacyPolicyPage() }">
   <app-header></app-header>
-  <div [ngClass]="{ 'content-grow': isImprintPage() }">
+  <div [ngClass]="{ 'content-grow': isImprintPage() || isPrivacyPolicyPage() }">
     <router-outlet></router-outlet>
   </div>
   <app-footer></app-footer>

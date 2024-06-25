@@ -99,9 +99,11 @@
       <p>
         {{ "ivereadthe" | translate }}
         <a
+          href="privacy-policy"
           class="privacy-policy"
-          [ngClass]="{ 'privacy-policy-german-spanish': isGerman() }"
-          [ngClass]="{ 'privacy-policy-german-spanish': isSpanish() }"
+          [ngClass]="{
+            'privacy-policy-german-spanish': isGerman() || isSpanish()
+          }"
           >{{ "privacypolicy" | translate }}</a
         >{{ "andagreethem" | translate }}
       </p>

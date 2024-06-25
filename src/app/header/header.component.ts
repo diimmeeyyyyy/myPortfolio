@@ -41,8 +41,16 @@ export class HeaderComponent {
     return this.location.path() === '/imprint';
   }
 
+  isPrivacyPolicyPage() {
+    return this.location.path() === '/privacy-policy';
+  }
+
   getHeaderLogo() {
-    if (!this.scrolled && !this.isImprintPage()) {
+    if (
+      !this.scrolled &&
+      !this.isImprintPage() &&
+      !this.isPrivacyPolicyPage()
+    ) {
       return '/assets/img/logo.png';
     } else {
       return '/assets/img/logo-hamburger-menu.png';
@@ -90,7 +98,9 @@ export class HeaderComponent {
   }
 
   stickyMenu() {
-    return this.scrolled && !this.isImprintPage();
+    return (
+      this.scrolled && !this.isImprintPage() && !this.isPrivacyPolicyPage()
+    );
   }
 
   disappearLogo() {

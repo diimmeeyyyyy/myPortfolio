@@ -20,6 +20,7 @@ main {
   left: 550px;
   color: #57e8a2;
   @include dflexColumn($g: 10px, $ai: flex-start);
+  animation: fade-in 2s linear forwards;
   > p {
     font-size: clamp(25px, 4vw, 64px);
   }
@@ -60,6 +61,8 @@ main {
   left: 100px;
   width: clamp(250px, 20vw, 420px);
   object-fit: cover;
+  animation: fade-in-opacity 2s linear forwards;
+  opacity: 0;
 }
 
 .bottom-ellipse {
@@ -132,6 +135,6 @@ MEDIA - QUERIES
 
 @media (max-width: 400px) {
   .corner-ellipse {
-    left: -340px;
+    left: -330px;
   }
 }

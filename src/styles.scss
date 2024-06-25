@@ -346,3 +346,108 @@ h4 {
   font-weight: 800;
   src: url("./assets/fonts/baloo-2-v21-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+/* ============
+KEYFRAMES
+===============*/
+@keyframes fade-in {
+   /*  0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    } */
+    25% {
+        opacity: 0.25;
+        transform: translateY(-35px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-10px);
+    }
+    75% {
+        opacity: 0.75;
+        transform: translateY(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-opacity {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateX(75%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateX(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes slide-in-left {
+ /*  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  } */
+  25% {
+    opacity: 0.25;
+    transform: translateX(-75%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-50%);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateX(-25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-left-using-left {
+  /* 0% {
+    opacity: 0;
+    left: -100%;
+  } */
+  25% {
+    opacity: 0.25;
+    left: -75px;
+  }
+  50% {
+    opacity: 0.5;
+    left: -50px;
+  }
+  75% {
+    opacity: 0.75;
+    left: 25px;
+  }
+  100% {
+    opacity: 1;
+    left: 100px; /* Endposition */
+  }
+}

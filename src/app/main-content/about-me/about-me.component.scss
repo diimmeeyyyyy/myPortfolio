@@ -23,10 +23,15 @@ main {
   }
   > section:nth-of-type(1) {
     font-family: "Baloo 2";
-    font-size: clamp(64px, 11vw, 100px);
+    font-size: clamp(60px, 11vw, 100px);
     font-weight: 600;
     color: #57e8a2;
     line-height: 0.8;
+    animation: slide-in-left 1s linear forwards;
+    animation-timeline: view();
+    animation-range: entry 100px;
+    opacity: 0;
+    transform: translateX(-100%);
     > p {
       width: max-content;
     }
@@ -34,8 +39,16 @@ main {
   > section:nth-of-type(2) {
     @include dflexColumn($g: clamp(24px, 5vw, 50px));
     font-size: clamp(18px, 4vw, 23px);
+    > article {
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: fade-in 3s linear forwards;
+      animation-timeline: view();
+      animation-range: entry 200px;
+    }
   }
 }
+
 
 /* ==========
 MEDIA - QUERIES

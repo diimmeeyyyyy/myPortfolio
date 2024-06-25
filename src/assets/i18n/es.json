@@ -38,5 +38,14 @@
   "imprinttext": "Mi oferta contiene enlaces a sitios web externos de terceros, sobre cuyos contenidos no tengo influencia. Por lo tanto, no puedo asumir ninguna responsabilidad por estos contenidos externos. El contenido de las páginas enlazadas es siempre responsabilidad del respectivo proveedor u operador de las páginas. Las páginas enlazadas fueron revisadas en busca de posibles infracciones legales en el momento de la vinculación. En el momento de la vinculación, no se reconocieron contenidos ilegales. Sin embargo, un control permanente del contenido de las páginas enlazadas no es razonable sin indicaciones específicas de una infracción legal. Al tener conocimiento de violaciones, eliminaré dichos enlaces de inmediato.",
   "websitecreatedby": "Aviso legal del sitio web creado por",
   "bythe": "por el",
-  "lawfirm": "bufete Hasselbach"
+  "lawfirm": "bufete Hasselbach",
+  "privacypolicy1": "Si nos envía consultas a través del formulario de contacto, sus datos del formulario de consulta, incluidos los datos de contacto que proporcionó allí, serán almacenados por nosotros con el fin de procesar la consulta y en caso de preguntas de seguimiento. No transmitiremos estos datos sin su consentimiento.",
+  "privacypolicy3": "Los datos que ha ingresado en el formulario de contacto permanecerán con nosotros hasta que nos solicite su eliminación, revoque su consentimiento para el almacenamiento, o el propósito del almacenamiento de datos ya no sea pertinente (por ejemplo, después de haber procesado su solicitud). Las disposiciones legales obligatorias, en particular los períodos de retención, no se ven afectadas.",
+  "privacypolicy2.1": "El procesamiento de estos datos se basa en",
+  "privacypolicy2.2": "Art. 6 párr. 1 lit. b RGPD",
+  "privacypolicy2.3": "siempre que su solicitud esté relacionada con el cumplimiento de un contrato o sea necesaria para la implementación de medidas precontractuales. En todos los demás casos, el procesamiento se basa en nuestro interés legítimo en el procesamiento efectivo de las consultas dirigidas a nosotros",
+  "privacypolicy2.4": "Art. 6 párr. 1 lit. f RGPD",
+  "privacypolicy2.5": "o basado en su consentimiento",
+  "privacypolicy2.6": "Art. 6 párr. 1 lit. a RGPD",
+  "privacypolicy2.7": "siempre que se haya solicitado; el consentimiento puede ser revocado en cualquier momento."
 }

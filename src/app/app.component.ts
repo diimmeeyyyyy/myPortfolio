@@ -24,12 +24,16 @@ export class AppComponent {
     private translateService: TranslateService,
     private location: Location
   ) {
-    this.translateService.setDefaultLang('en');
-    this.translateService.use(localStorage.getItem('lang') || 'en');
+    this.translateService.setDefaultLang('de');
+    this.translateService.use(localStorage.getItem('lang') || 'de');
   }
 
   isImprintPage() {
     return this.location.path() === '/imprint';
+  }
+
+  isPrivacyPolicyPage() {
+    return this.location.path() === '/privacy-policy';
   }
 
   title = 'portfolio';

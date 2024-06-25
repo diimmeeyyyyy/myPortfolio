@@ -19,7 +19,7 @@ main {
   max-width: 680px;
   > h1 {
     font-family: "Baloo 2";
-    font-size: clamp(64px, 11vw, 100px);
+    font-size: clamp(60px, 11vw, 100px);
     font-weight: 600;
     color: #57e8a2;
     line-height: 0.8;
@@ -40,7 +40,7 @@ main {
   width: clamp(70px, 13vw, 180px);
   position: absolute;
   right: 10%;
-  top: 10%;
+  top: 5%;
 }
 
 .ellipse-three {
@@ -120,6 +120,10 @@ MEDIA - QUERIES
 }
 
 @media (max-width: 680px) {
+  .ellipse-two {
+    top: 8%;
+  }
+
   .ellipse-four {
     right: -220px;
     top: 850px;
