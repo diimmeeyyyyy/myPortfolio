@@ -27,6 +27,10 @@ export class MyWorkComponent {
     this.translateService.get('joindescription').subscribe((res: string) => {
       this.projects[2].description = res;
     });
+
+    this.translateService.onLangChange.subscribe(() => {
+      this.ngOnInit();
+    });
   }
 
   projects = [

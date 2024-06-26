@@ -53,6 +53,13 @@ h4 {
   gap: $g;
 }
 
+@mixin projectContainer($fd){
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 3vw, 80px);
+  flex-direction: $fd;
+}
+
 .button-settings {
   padding-block: clamp(13px, 5vw, 15px);
   padding-inline: clamp(24px, 5vw, 30px);
@@ -407,10 +414,10 @@ KEYFRAMES
 
 
 @keyframes slide-in-left {
- /*  0% {
+  0% {
     opacity: 0;
     transform: translateX(-100%);
-  } */
+  }
   25% {
     opacity: 0.25;
     transform: translateX(-75%);

@@ -1,11 +1,6 @@
 @import "./../../../../styles.scss";
 
 main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(24px, 3vw, 80px);
   > section img {
     height: clamp(215px, 40vw, 400px);
     width: clamp(330px, 61vw, 620px);
@@ -13,6 +8,45 @@ main {
     &:hover {
       box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
       transform: scale(1.05) translateY(-10px);
+    }
+  }
+}
+
+.project-container.row {
+  @include projectContainer($fd: row);
+  > section:nth-of-type(1) {
+    animation: slide-in-left 1s linear forwards;
+    /*  animation-timeline: view();
+    animation-range: entry 100px;
+    opacity: 0;
+    transform: translateX(-100%); */
+  }
+  > section:nth-of-type(2) {
+    /*  opacity: 0;
+    transform: translateY(-50px); */
+    animation: fade-in 2s linear forwards;
+    /*  animation-timeline: view();
+    animation-range: entry 200px; */
+    align-items: flex-start;
+    > p {
+      text-align: start;
+    }
+  }
+}
+
+.project-container.row-reverse {
+  @include projectContainer($fd: row-reverse);
+  > section:nth-of-type(1) {
+    animation: fade-in 2s linear forwards;
+  }
+  > section:nth-of-type(2) {
+    align-items: flex-end;
+    animation: slide-in-left 1s linear forwards;
+    > p {
+      text-align: end;
+    }
+    > h2 {
+      text-align: end;
     }
   }
 }
@@ -25,7 +59,7 @@ main {
 .project-information {
   @include dflexColumn($g: 32px, $ai: center);
   width: 50%;
-  padding-inline: clamp(24px, 6vw, 64px);
+  /* padding-inline: clamp(24px, 6vw, 64px); */
   > h1 {
     color: rgba(87, 232, 162, 1);
     font-family: "Baloo 2";
@@ -50,39 +84,40 @@ main {
   }
 }
 
-/* .live-test-button {
-  border: none;
-  background: radial-gradient(circle, #57e8a2 0%, #33b476 100%);
-  border-radius: 10px;
-  padding: 13px 24px;
-  font-size: 23px;
-  color: white;
-  cursor: pointer;
-} */
-
 /* ===========
 MEDIA - QUERIES
 ===============*/
-@media (min-width: 1025px) {
+@media (max-width: 1024px) {
+  .project-container.row,
+  .project-container.row-reverse {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-information {
+    align-items: unset;
+  }
+
   .project-container.row {
-    flex-direction: row;
     > section:nth-of-type(2) {
-      align-items: flex-start;
+      align-items: center;
       > p {
-        text-align: start;
+        text-align: center;
+      }
+      > h2 {
+        text-align: center;
       }
     }
   }
 
   .project-container.row-reverse {
-    flex-direction: row-reverse;
     > section:nth-of-type(2) {
-      align-items: flex-end;
+      align-items: center;
       > p {
-        text-align: end;
+        text-align: center;
       }
       > h2 {
-        text-align: end;
+        text-align: center;
       }
     }
   }

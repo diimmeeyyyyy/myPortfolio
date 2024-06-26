@@ -103,6 +103,9 @@
   display: inline-block;
   width: 110px;
   cursor: pointer;
+  &:hover {
+    font-weight: bold;
+  }
 }
 
 .privacy-policy-german-spanish {
