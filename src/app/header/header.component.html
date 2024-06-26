@@ -4,12 +4,14 @@
       [src]="getHeaderLogo()"
       (click)="scrollToTop()"
       [ngClass]="{ 'disappear-logo': disappearLogo() }"
+      data-aos="fade-right"
     />
-    <nav class="display-menu">
+    <nav class="display-menu" data-aos="fade-left">
       <a
         href="#About-Me"
         (click)="setActiveMenuPoint('About-Me')"
         [ngClass]="{ active: activeMenuPoint === 'About-Me' }"
+        data-aos="fade-left"
         >{{ "aboutme" | translate }}</a
       >
       <a

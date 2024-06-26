@@ -1,8 +1,11 @@
 <main class="project-container" [ngClass]="getContainerClass(index)">
-  <section>
+  <section [attr.data-aos]="isImageOnLeft(index) ? 'fade-right' : 'fade-left'">
     <img [src]="projectData.img" loading="eager" />
   </section>
-  <section class="project-information">
+  <section
+    class="project-information"
+    [attr.data-aos]="isImageOnLeft(index) ? 'fade-left' : 'fade-right'"
+  >
     <h1>{{ projectData.title }}</h1>
     <h2>{{ projectData.skills }}</h2>
     <p class="project-description">

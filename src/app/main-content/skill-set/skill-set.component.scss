@@ -4,7 +4,7 @@ main {
   position: relative;
   @include dflexColumn();
   background: linear-gradient(128.95deg, #57e8a2 32.52%, #33b476 104.12%);
-
+  /* @include fadeInSettings($offset: 100px); */
   > div {
     @include dflexColumn();
     padding-block: 50px;

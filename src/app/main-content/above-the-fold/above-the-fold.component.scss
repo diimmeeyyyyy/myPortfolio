@@ -20,7 +20,7 @@ main {
   left: 550px;
   color: #57e8a2;
   @include dflexColumn($g: 10px, $ai: flex-start);
-  animation: fade-in 2s linear forwards;
+  /* animation: fade-in 2s linear forwards; */
   > p {
     font-size: clamp(25px, 4vw, 64px);
   }
@@ -40,7 +40,6 @@ main {
   > a img {
     cursor: pointer;
     width: 40px;
-    transition: transform 0.3s ease-in-out;
     &:hover {
       transform: translateX(-15px);
     }
@@ -61,8 +60,6 @@ main {
   left: 100px;
   width: clamp(250px, 20vw, 420px);
   object-fit: cover;
-  animation: fade-in-opacity 2s linear forwards;
-  opacity: 0;
 }
 
 .bottom-ellipse {

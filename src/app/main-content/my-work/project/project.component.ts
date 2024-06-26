@@ -16,4 +16,12 @@ export class ProjectComponent {
   getContainerClass(index: number): string {
     return index % 2 === 0 ? 'row' : 'row-reverse';
   }
+
+  // In Ihrer project.component.ts
+isImageOnLeft(index: number): boolean {
+  // Eine Logik, die bestimmt, ob das Bild links sein soll, basierend auf dem Index oder einer anderen Bedingung
+  return index % 2 === 0; // Beispiel: Wechselt die Seite für jedes Projekt
 }
+}
+
+
