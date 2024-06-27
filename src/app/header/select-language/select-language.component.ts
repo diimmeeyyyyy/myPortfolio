@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './select-language.component.scss',
 })
 export class SelectLanguageComponent implements OnInit {
-  selectedLanguageImg = '/assets/img/english.png';
+  selectedLanguageImg = '/assets/img/german.png';
   showLanguageOptions = false;
   lang: string = '';
 
