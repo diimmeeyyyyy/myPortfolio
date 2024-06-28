@@ -111,7 +111,7 @@ export class ContactFormComponent {
     message: '',
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://dimitrios-kapetanis.com/sendMail.php',

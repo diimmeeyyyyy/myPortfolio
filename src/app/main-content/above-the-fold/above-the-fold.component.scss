@@ -55,9 +55,9 @@ main {
 .portfolio-foto {
   position: absolute;
   bottom: 0;
-  height: 88vh;
   left: 100px;
-  width: clamp(250px, 20vw, 420px);
+  height: clamp(70vh, 70vw, 85vh);
+  width: clamp(320px, 15vw, 420px);
   object-fit: cover;
 }
 
@@ -125,7 +125,7 @@ MEDIA - QUERIES
 
   .portfolio-foto {
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
   }
 }
 

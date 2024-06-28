@@ -34,6 +34,7 @@ main {
     $ai: flex-start,
     $jc: flex-start
   );
+  max-width: 64ch;
   > h2 {
     font-size: clamp(23px, 5vw, 32px);
     font-weight: 700;

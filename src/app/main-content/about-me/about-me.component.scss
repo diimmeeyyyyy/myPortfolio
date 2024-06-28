@@ -33,10 +33,10 @@ main {
   }
   > section:nth-of-type(2) {
     @include dflexColumn($g: clamp(24px, 5vw, 50px));
+    max-width: 64ch;
     font-size: clamp(18px, 4vw, 23px);
   }
 }
-
 
 /* ==========
 MEDIA - QUERIES

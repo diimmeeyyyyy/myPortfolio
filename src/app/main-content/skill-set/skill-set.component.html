@@ -2,38 +2,12 @@
   <div>
     <h1 data-aos="fade-down">{{ "skillset" | translate }}</h1>
     <section class="all-skills">
-      <div class="one-skill" data-aos="fade-left">
-        <img src="./../../assets/img/angularIcon.png" alt="Angular" />
-        <figcaption>Angular</figcaption>
-      </div>
-      <div class="one-skill" data-aos="fade-left">
-        <img src="./../../assets/img/TypescriptIcon.png" alt="Typescript" />
-        <figcaption>Typescript</figcaption>
-      </div>
-      <div class="one-skill" data-aos="fade-left">
-        <img src="./../../assets/img/Javascript.png" alt="Javascript" />
-        <figcaption>Javascript</figcaption>
-      </div>
-      <div class="one-skill" data-aos="fade-left">
-        <img src="./../../assets/img/FirebaseIcon.png" alt="Firebase" />
-        <figcaption>Firebase</figcaption>
-      </div>
+      @for (skill of allSkills; track $index) {
       <div class="one-skill" data-aos="fade-right">
-        <img src="./../../assets/img/HTMLIcon.png" alt="HTML" />
-        <figcaption>HTML</figcaption>
+        <img [src]="skill.img" />
+        <figcaption>{{ skill.name }}</figcaption>
       </div>
-      <div class="one-skill" data-aos="fade-right">
-        <img src="./../../assets/img/CSSIcon.png" alt="CSS" />
-        <figcaption>CSS</figcaption>
-      </div>
-      <div class="one-skill" data-aos="fade-right">
-        <img src="./../../assets/img/scrumIcon.png" alt="Scrum" />
-        <figcaption>Scrum</figcaption>
-      </div>
-      <div class="one-skill" data-aos="fade-right">
-        <img src="./../../assets/img/GitIcon.png" alt="GIT" />
-        <figcaption>GIT</figcaption>
-      </div>
+      }
     </section>
   </div>
 </main>

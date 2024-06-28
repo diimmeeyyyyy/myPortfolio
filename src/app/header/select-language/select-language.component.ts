@@ -10,14 +10,14 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './select-language.component.scss',
 })
 export class SelectLanguageComponent implements OnInit {
-  selectedLanguageImg = '/assets/img/german.png';
+  selectedLanguageImg = '/assets/img/german.pngg';
   showLanguageOptions = false;
   lang: string = '';
 
   constructor(private translateService: TranslateService) {}
 
   ngOnInit(): void {
-    this.lang = localStorage.getItem('lang') || 'en';
+    this.lang = localStorage.getItem('lang') || 'de';
     if (this.lang === 'de') {
       this.selectedLanguageImg = '/assets/img/german.png';
     } else if (this.lang === 'es') {
@@ -33,7 +33,6 @@ export class SelectLanguageComponent implements OnInit {
 
   selectLanguage(event: MouseEvent, lang: string, imgSrc: string) {
     event.stopPropagation(); // Verhindert die Weitergabe des Ereignisses
-    /* alert(`Sprache ausgewählt: ${lang}`); */
     localStorage.setItem('lang', lang);
     this.translateService.use(lang);
     this.selectedLanguageImg = imgSrc;

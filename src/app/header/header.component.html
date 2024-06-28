@@ -5,13 +5,13 @@
       (click)="scrollToTop()"
       [ngClass]="{ 'disappear-logo': disappearLogo() }"
       data-aos="fade-right"
+      data-aos-once="true"
     />
-    <nav class="display-menu" data-aos="fade-left">
+    <nav class="display-menu" data-aos="fade-left" data-aos-once="true">
       <a
         href="#About-Me"
         (click)="setActiveMenuPoint('About-Me')"
         [ngClass]="{ active: activeMenuPoint === 'About-Me' }"
-        data-aos="fade-left"
         >{{ "aboutme" | translate }}</a
       >
       <a
