@@ -14,7 +14,7 @@
       (blur)="blurInputfield('name')"
     >
       <input
-        ((focus))="focusInputField('name')"
+        (focus)="focusInputField('name')"
         (blur)="blurInputfield('name')"
         #Name_Input
         #name="ngModel"
@@ -40,7 +40,7 @@
         'invalid-input-value': email.invalid && focusOnEmail,
         'valid-input-value': email.valid && focusOnEmail
       }"
-      ((click))="focusInputField('email')"
+      (click)="focusInputField('email')"
       (blur)="blurInputfield('email')"
     >
       <input
@@ -50,7 +50,7 @@
         name="email"
         type="text"
         required
-        pattern="[a-zA-Z0-9._%+]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}"
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
         [placeholder]="'youremail' | translate"
         #email="ngModel"
       />
