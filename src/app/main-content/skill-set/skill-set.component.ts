@@ -42,5 +42,13 @@ export class SkillSetComponent {
       name: 'GIT',
       img: '/assets/img/GitIcon.png',
     },
+    {
+      name: 'Material Design',
+      img: '/assets/img/MaterialDesign.png',
+    },
+    {
+      name: 'API',
+      img: '/assets/img/API.png',
+    },
   ];
 }

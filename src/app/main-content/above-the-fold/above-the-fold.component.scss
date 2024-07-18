@@ -58,7 +58,7 @@ main {
   bottom: 0;
   left: 100px;
   height: clamp(70vh, 70vw, 85vh);
-  width: clamp(360px, 15vw, 420px);
+  width: clamp(340px, 35vw, 450px);
   object-fit: cover;
 }
 
@@ -104,7 +104,7 @@ MEDIA - QUERIES
 
   .portfolio-foto {
     left: 45%;
-    width: auto;
+    /* width: auto; */
     height: clamp(70vh, 70vw, 85vh);
   }
 }

@@ -22,7 +22,7 @@ main {
 
 .all-skills {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   row-gap: clamp(32px, 10vw, 50px);
   column-gap: clamp(32px, 10vw, 250px);
   justify-content: center;
@@ -57,6 +57,13 @@ main {
 /* ============
 MEDIA - QUERIES
 ================*/
+@media (max-width: 1024px) {
+  .all-skills {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+}
+
 @media (max-width: 550px) {
   .all-skills {
     grid-template-columns: repeat(3, 1fr);

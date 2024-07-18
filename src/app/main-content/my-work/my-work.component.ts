@@ -27,6 +27,11 @@ export class MyWorkComponent {
     this.translateService.get('joindescription').subscribe((res: string) => {
       this.projects[2].description = res;
     });
+    this.translateService
+      .get('olympiagrilldescription')
+      .subscribe((res: string) => {
+        this.projects[3].description = res;
+      });
 
     this.translateService.onLangChange.subscribe(() => {
       this.ngOnInit();
@@ -58,14 +63,13 @@ export class MyWorkComponent {
       github: 'https://github.com/diimmeeyyyyy/join',
       livetest: 'https://dimitrios-kapetanis.com/join',
     },
-    /* {
+    {
       title: 'Olympia - Grill',
       skills: 'Angular | Typescript | HTML | CSS | Firebase',
-      description:
-        'Website for my parents restaurant where clients can individually select and pre-order their food',
-      img: 'assets/img/join.png',
-
-      //UND NOCH ELLIPSE-SEVEN AUF DISPLAY:FLEX SETZEN WIEDER
-    }, */
+      description: '',
+      img: 'assets/img/ogWebsite.png',
+      github: 'https://github.com/diimmeeyyyyy/OlympiaGrill_Website_Angular',
+      livetest: 'https://olympiagrill.dimitrios-kapetanis.com',
+    },
   ];
 }
