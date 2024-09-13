@@ -28,9 +28,14 @@ export class MyWorkComponent {
       this.projects[2].description = res;
     });
     this.translateService
-      .get('olympiagrilldescription')
+      .get('dabubbledescription')
       .subscribe((res: string) => {
         this.projects[3].description = res;
+      });
+    this.translateService
+      .get('olympiagrilldescription')
+      .subscribe((res: string) => {
+        this.projects[4].description = res;
       });
 
     this.translateService.onLangChange.subscribe(() => {
@@ -62,6 +67,14 @@ export class MyWorkComponent {
       img: 'assets/img/join.png',
       github: 'https://github.com/diimmeeyyyyy/join',
       livetest: 'https://dimitrios-kapetanis.com/join',
+    },
+    {
+      title: 'DA-Bubble',
+      skills: 'Angular | Typescript | HTML | CSS | Firebase',
+      description: '',
+      img: 'assets/img/daBubble.svg',
+      github: 'https://github.com/TechCoder95/dabubble',
+      livetest: 'https://dabubble.dimitrios-kapetanis.com',
     },
     {
       title: 'Olympia - Grill',
