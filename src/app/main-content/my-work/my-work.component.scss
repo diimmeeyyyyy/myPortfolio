@@ -70,8 +70,8 @@ main {
 .ellipse-six {
   width: 250px;
   position: absolute;
-  /* top: 1620px; */
-  top: 70%;
+  /*  top: 70%; */
+  bottom: 10%;
   left: -10%;
   z-index: -1;
 }
@@ -103,8 +103,8 @@ MEDIA - QUERIES
   }
 
   .ellipse-six {
-    top: 53%;
-    bottom: 20%;
+    top: 62%;
+   /*  bottom: 20%; */
     left: 0;
   }
 
@@ -146,7 +146,7 @@ MEDIA - QUERIES
     right: -150px;
   }
 
-  .ellipse-seven {
+  /* .ellipse-seven {
     bottom: 580px;
-  }
+  } */
 }

@@ -79,8 +79,8 @@ export class MyWorkComponent {
     {
       title: 'Olympia - Grill',
       skills: 'Angular | Typescript | HTML | CSS | Firebase',
-      description: '',
-      img: 'assets/img/ogWebsite.png',
+      description: 'assets/img/olympiagrill.png',
+      img: 'assets/img/olympiagrill.png',
       github: 'https://github.com/diimmeeyyyyy/OlympiaGrill_Website_Angular',
       livetest: 'https://olympiagrill.dimitrios-kapetanis.com',
     },
