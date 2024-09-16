@@ -72,7 +72,7 @@ export class MyWorkComponent {
       title: 'DA-Bubble',
       skills: 'Angular | Typescript | HTML | CSS | Firebase',
       description: '',
-      img: 'assets/img/daBubble.svg',
+      img: 'assets/img/dabubble.png',
       github: 'https://github.com/TechCoder95/dabubble',
       livetest: 'https://dabubble.dimitrios-kapetanis.com',
     },
