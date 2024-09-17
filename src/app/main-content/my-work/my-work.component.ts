@@ -45,8 +45,8 @@ export class MyWorkComponent {
 
   projects = [
     {
-      title: 'Pollo Loco',
-      skills: 'Javascript | HTML | CSS',
+      title: 'El Pollo Loco',
+      skills: 'JavaScript | HTML | CSS',
       description: '',
       img: 'assets/img/polloLoco.png',
       github: 'https://github.com/diimmeeyyyyy/El_Pollo_Loco',
@@ -54,7 +54,7 @@ export class MyWorkComponent {
     },
     {
       title: 'Pokédex',
-      skills: 'Javascript | HTML | CSS | API',
+      skills: 'JavaScript | HTML | CSS | API',
       description: '',
       img: 'assets/img/pokedex.png',
       github: 'https://github.com/diimmeeyyyyy/Pokedex',
@@ -62,7 +62,7 @@ export class MyWorkComponent {
     },
     {
       title: 'Join',
-      skills: 'Javascript | HTML | CSS',
+      skills: 'JavaScript | HTML | CSS',
       description: '',
       img: 'assets/img/join.png',
       github: 'https://github.com/diimmeeyyyyy/join',
@@ -70,7 +70,7 @@ export class MyWorkComponent {
     },
     {
       title: 'DA-Bubble',
-      skills: 'Angular | Typescript | HTML | CSS | Firebase',
+      skills: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: '',
       img: 'assets/img/dabubble.png',
       github: 'https://github.com/TechCoder95/dabubble',
@@ -78,7 +78,7 @@ export class MyWorkComponent {
     },
     {
       title: 'Olympia - Grill',
-      skills: 'Angular | Typescript | HTML | CSS | Firebase',
+      skills: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'assets/img/olympiagrill.png',
       img: 'assets/img/olympiagrill.png',
       github: 'https://github.com/diimmeeyyyyy/OlympiaGrill_Website_Angular',

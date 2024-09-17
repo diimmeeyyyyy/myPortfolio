@@ -15,11 +15,11 @@ export class SkillSetComponent {
       img: '/assets/img/angularIcon.png',
     },
     {
-      name: 'Typescript',
+      name: 'TypeScript',
       img: '/assets/img/TypescriptIcon.png',
     },
     {
-      name: 'Javascript',
+      name: 'JavaScript',
       img: '/assets/img/Javascript.png',
     },
     {

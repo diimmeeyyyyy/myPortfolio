@@ -57,8 +57,8 @@ main {
   position: absolute;
   bottom: 0;
   left: 100px;
-  height: clamp(70vh, 70vw, 85vh);
-  width: clamp(340px, 35vw, 450px);
+  height: clamp(70vh, 70vw, 95vh);
+  width: clamp(340px, 35vw, 500px);
   object-fit: cover;
 }
 
